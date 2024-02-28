@@ -1,5 +1,6 @@
 /* -----> Third Party packages <----- */
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 /* -----> Component <----- */
 const Header = () => {
@@ -7,7 +8,10 @@ const Header = () => {
 
     // Return JSX
     return (
-        <div>Header</div>
+        <div>
+            <Link to="/">Home</Link>
+            <Link to="/about">Home</Link>
+        </div>
     )
 }
 

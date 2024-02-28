@@ -7,7 +7,7 @@ const Home = () => {
 
     // Return JSX
     return (
-        <div>Home</div>
+        <div>Home Page</div>
     )
 }
 

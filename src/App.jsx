@@ -8,7 +8,7 @@ const App = () => {
 
   // Return JSX
   return (
-    <div>App</div>
+    <div>App Layout</div>
   )
 }
 

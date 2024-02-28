@@ -7,7 +7,10 @@ const Home = () => {
 
     // Return JSX
     return (
-        <div>Home Page</div>
+        <div>
+            <h1 className="text-3xl font-bold underline">
+                Home Page
+            </h1></div>
     )
 }
 

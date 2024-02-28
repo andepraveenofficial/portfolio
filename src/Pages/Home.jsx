@@ -1,5 +1,3 @@
-/* -----> Third Party Packages <-----*/
-import React from 'react'
 
 /* -----> Component <----- */
 const Home = () => {
@@ -7,10 +5,7 @@ const Home = () => {
 
     // Return JSX
     return (
-        <div>
-            <h1 className="text-3xl font-bold underline">
-                Home Page
-            </h1></div>
+        <div>Home Page on Working</div>
     )
 }
 

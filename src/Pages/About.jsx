@@ -1,5 +1,3 @@
-/* -----> Third Party Packages <-----*/
-import React from 'react'
 
 /* -----> Component <----- */
 const About = () => {
@@ -7,7 +5,7 @@ const About = () => {
 
     // Return JSX
     return (
-        <div>About Page</div>
+        <div>About Page on Working</div>
     )
 }
 

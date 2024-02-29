@@ -22,7 +22,7 @@ const Home = () => {
 
     // Return JSX
     return (
-        <div className="z-50 flex flex-col items-center justify-center flex-1 gap-5 m-auto mx-8 text-white lg:mx-64">
+        <div className="z-50 flex flex-col items-center justify-center flex-1 gap-5 p-4 m-auto mx-8 text-white lg:mx-64">
             <div>
                 <h1 style={headingStyles} className="text-[45px]">Hi There !</h1>
                 <p className="text-[14px] sm:text-[18px] font-light sm:leading-7 leading-6">I am Ande Praveen, a Software Engineer focused on Front-End. I enjoy building stunning and user-friendly website building . Explore my skills, projects, and journey in About Me. If you're interested in working with me, please feel free to get in touch with me.</p>

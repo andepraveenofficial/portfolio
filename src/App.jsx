@@ -30,7 +30,7 @@ const App = () => {
       </Suspense>
       <BrowserRouter>
         <Header />
-        <Routes>
+        <Routes >
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />

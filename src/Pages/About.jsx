@@ -5,7 +5,7 @@ const About = () => {
 
     // Return JSX
     return (
-        <div className="text-white">About Page on Working</div>
+        <div className="z-50 text-white">About Page on Working</div>
     )
 }
 

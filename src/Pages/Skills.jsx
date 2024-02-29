@@ -5,7 +5,7 @@ const Skills = () => {
 
     // Return JSX
     return (
-        <div className="text-white">Skills Page on Working</div>
+        <div className="z-50 text-white">Skills Page on Working</div>
     )
 }
 

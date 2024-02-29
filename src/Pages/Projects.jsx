@@ -5,7 +5,7 @@ const Projects = () => {
 
     // Return JSX
     return (
-        <div>Projects Page on Working</div>
+        <div className="text-white">Projects Page on Working</div>
     )
 }
 

@@ -5,7 +5,7 @@ const Contact = () => {
 
     // Return JSX
     return (
-        <div>Contact page on Working</div>
+        <div className="text-white">Contact page on Working</div>
     )
 }
 

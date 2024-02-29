@@ -1,14 +1,16 @@
+/* -----> Third Party Packages <----- */
 import { motion } from "framer-motion";
 
+/* -----> Styles <----- */
 const logoFont = {
     "font-family": "Dancing Script, cursive",
     "font-optical-sizing": "auto",
     "font-weight": "700",
     "font-style": "normal"
-
 }
 
-export default function App() {
+/* -----> Component <----- */
+const Logo = () => {
     return (
         <motion.div
             initial={{ scale: 0.5 }}
@@ -23,7 +25,10 @@ export default function App() {
             }}
             style={logoFont}
         >
-            <h1 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ande Praveen</h1>
+            <h1 className="text-white self-center text-2xl font-semibold whitespace-nowrap">Ande Praveen</h1>
         </motion.div>
     );
 }
+
+/* -----> Export <----- */
+export default Logo

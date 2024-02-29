@@ -21,16 +21,16 @@ const Header = () => {
     // React Elements
     const socialIcons = <>
         <a href="https://www.linkedin.com/in/andepraveen/" target="blank">
-            <AiFillLinkedin className='w-6 h-6' />
+            <AiFillLinkedin className='w-6 h-6 text-white hover:bg-gray-600' />
         </a>
         <a href="https://github.com/andepraveenofficial" target="blank">
-            <AiFillGithub className='w-6 h-6' />
+            <AiFillGithub className='w-6 h-6 text-white hover:bg-gray-600' />
         </a>
     </>
 
     // Return JSX
     return (
-        <header className="w-full bg-white">
+        <header className="w-full ">
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                     <Logo />
@@ -45,28 +45,28 @@ const Header = () => {
                         type="button"
                         className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     >
-                        <GiHamburgerMenu />
+                        <GiHamburgerMenu className='w-7 h-7 text-white' />
                     </button>
                 </div>
                 <div className={isMenuOpen ? 'items-center justify-between w-full md:flex md:w-auto md:order-1' : 'hidden w-full md:flex md:w-auto md:order-1'} id="navbar-sticky">
-                    <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                        <li>
-                            <Link to="/" className="block px-3 py-2 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" >Home</Link>
+                    <ul className="flex flex-col p-3 h-12 mt-4 font-sm rounded-lg md:bg-[#6d6d6f80] rtl:space-x-reverse md:flex-row md:mt-0 md:justify-space-between md:items-center md:p-2.5 z-50">
+                        <li className='hover:bg-gray-600'>
+                            <Link to="/" className="block px-3 py-2 text-white rounded " >Home</Link>
+                        </li>
+                        <li className='hover:bg-gray-600'>
+                            <Link to="/about" className="block px-3 py-2 text-white rounded " >About</Link>
+                        </li>
+                        <li className='hover:bg-gray-600'>
+                            <Link to="/skills" className="block px-3 py-2 text-white rounded " >Skills</Link>
+                        </li>
+                        <li className='hover:bg-gray-600'>
+                            <Link to="/projects" className="block px-3 py-2 text-white rounded " >Projects</Link>
+                        </li>
+                        <li className='hover:bg-gray-600'>
+                            <Link to="/contact" className="block px-3 py-2 text-white rounded" >Contact</Link>
                         </li>
                         <li>
-                            <Link to="/about" className="block px-3 py-2 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" >About</Link>
-                        </li>
-                        <li>
-                            <Link to="/skills" className="block px-3 py-2 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" >Skills</Link>
-                        </li>
-                        <li>
-                            <Link to="/projects" className="block px-3 py-2 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" >Projects</Link>
-                        </li>
-                        <li>
-                            <Link to="/contact" className="block px-3 py-2 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" >Contact</Link>
-                        </li>
-                        <li>
-                            <div className={`${isMenuOpen ? "flex gap-2 md:hidden" : "flex gap-2 md:hidden"} px-3 py-2 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500`}>
+                            <div className={`${isMenuOpen ? "flex gap-2 md:hidden" : "flex gap-2 md:hidden"} px-3 py-2 text-white  rounded md:bg-transparent  md:p-0`}>
                                 {socialIcons}
                             </div>
                         </li>

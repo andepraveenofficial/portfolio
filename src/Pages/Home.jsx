@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom"
 
 /* -----> Assets <----- */
-import Resume from "./../../public/CV.pdf"
+import Resume from "./../Assets/CV.pdf"
 
 /* -----> Styles <----- */
 const headingStyles =

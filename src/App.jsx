@@ -18,7 +18,7 @@ const App = () => {
 
   // Return JSX
   return (
-    <div className='bg-[#333333] h-screen'>
+    <div className='bg-[#333333] flex flex-col h-screen'>
       <BrowserRouter>
         <Header />
         <Routes>

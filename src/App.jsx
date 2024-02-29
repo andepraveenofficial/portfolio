@@ -1,5 +1,6 @@
 /* -----> Third party Packages <-----*/
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Suspense, lazy } from "react"
 
 /* -----> External Components <----- */
 import Header from './Layouts/Header'
@@ -11,7 +12,8 @@ import Contact from "./Pages/Contact"
 
 /* -----> Features <----- */
 import Cursor from './Features/Cursor'
-import Colors from './Features/BackgroundEffects/Colors'
+// import Colors from './Features/BackgroundEffects/Colors'  // Added as Lazy-Loading
+const Colors = lazy(() => import('./Features/BackgroundEffects/Colors'))
 
 
 /* -----> Component <----- */
@@ -21,9 +23,11 @@ const App = () => {
 
   // Return JSX
   return (
-    <div className='flex flex-col h-screen '>
+    <div className='flex flex-col h-screen bg-[#333333]'>
       <Cursor />
-      <Colors />
+      <Suspense>
+        <Colors />
+      </Suspense>
       <BrowserRouter>
         <Header />
         <Routes>

@@ -26,7 +26,7 @@ const Home = () => {
             <div className="flex flex-col gap-5 md:flex-row">
                 <button className="p-3 text-black bg-white rounded-full" onClick={() => navigate("/contact")}>Contact Me</button>
 
-                <a href="../../public/CV.pdf" target="_blank" download="Ande Praveen Resume" className="p-3 border rounded-full">
+                <a href="./../../public/CV.pdf" target="blank" download="Ande Praveen Resume" className="p-3 border rounded-full">
                     Download CV
                 </a>
 

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Logo from "./../Assets/Logo"
 
 
 /* -----> Component <----- */
@@ -32,7 +33,7 @@ const Header = () => {
         <header className="w-full bg-white">
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ande Praveen</span>
+                    <Logo />
                 </div>
                 <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
                     <div className={isMenuOpen ? 'hidden' : 'hidden gap-2 md:flex'}>

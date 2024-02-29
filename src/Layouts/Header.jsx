@@ -37,14 +37,14 @@ const Header = () => {
                     <Logo />
                 </div>
                 <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
-                    <div className={isMenuOpen ? 'hidden' : 'hidden gap-2 md:flex'}>
+                    <div className={isMenuOpen ? 'hidden' : 'hidden gap-2 md:flex z-50'}>
                         {socialIcons}
                     </div>
 
                     <button
                         onClick={toggleMenu}
                         type="button"
-                        className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        className="z-50 inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     >
                         <GiHamburgerMenu className='text-white w-7 h-7' />
                     </button>
@@ -67,7 +67,7 @@ const Header = () => {
                             <Link to="/contact" className="block px-3 py-2 text-white rounded" >Contact</Link>
                         </li>
                         <li>
-                            <div className={`${isMenuOpen ? "flex gap-2 md:hidden" : "flex gap-2 md:hidden"} px-3 py-2 text-white  rounded md:bg-transparent  md:p-0`}>
+                            <div className={`${isMenuOpen ? "flex gap-2 md:hidden" : "flex gap-2 md:hidden"} px-3 py-2 text-white  rounded md:bg-transparent  md:p-0 z-50`}>
                                 {socialIcons}
                             </div>
                         </li>

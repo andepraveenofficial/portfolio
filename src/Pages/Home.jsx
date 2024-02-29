@@ -7,9 +7,9 @@ import Resume from "./../Assets/CV.pdf"
 /* -----> Styles <----- */
 const headingStyles =
 {
-    "font-family": "Zeyada, cursive",
-    "font-weight": "400",
-    "font-style": "normal"
+    "fontFamily": "Zeyada, cursive",
+    "fontWeight": "400",
+    "fontStyle": "normal"
 }
 
 
@@ -30,7 +30,7 @@ const Home = () => {
             <div className="flex flex-col gap-5 md:flex-row">
                 <button className="p-3 text-black bg-white rounded-full" onClick={() => navigate("/contact")}>Contact Me</button>
 
-                <a href={Resume} target="blank" download="Ande Praveen Resume" className="p-3 border rounded-full">
+                <a href={Resume} target="blank" download="Ande Praveen Resume" className="p-3 border rounded-full" >
                     Download CV
                 </a>
 

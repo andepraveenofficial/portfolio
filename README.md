@@ -14,8 +14,9 @@ Figma Drawing
 2. Data Layer => Redux Toolkit
 3. Routing => react-router-dom
 4. Styling => Tailwindcss, styled-components
-5. Bundler => React + Vite
-6. Testing => jest
+5. Animations => Framer Motion , tsparticles
+6. Bundler => React + Vite
+7. Testing => jest
 
 ### Features
 * In future we will add 
@@ -69,3 +70,14 @@ Drawing :
    - index.css
    - App.jsx
    - App.css
+   * Assets
+   * Layouts
+        - Header
+   * Pages
+        - Home
+        - About
+        - Skills
+        - Projects
+        - Contact
+   * Features  
+        - Cursor

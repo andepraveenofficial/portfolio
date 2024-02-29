@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 
 /* -----> Styles <----- */
 const logoFont = {
-    "font-family": "Dancing Script, cursive",
-    "font-optical-sizing": "auto",
-    "font-weight": "700",
-    "font-style": "normal"
+    "fontFamily": "Dancing Script, cursive",
+    "fontWeight": "700",
+    "fontStyle": "normal"
 }
 
 /* -----> Component <----- */
@@ -25,7 +24,7 @@ const Logo = () => {
             }}
             style={logoFont}
         >
-            <h1 className="text-white self-center text-2xl font-semibold whitespace-nowrap">Ande Praveen</h1>
+            <h1 className="self-center text-2xl font-semibold text-white whitespace-nowrap">Ande Praveen</h1>
         </motion.div>
     );
 }

@@ -1,5 +1,4 @@
 /* -----> Third party Packages <-----*/
-import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 /* -----> External Components <----- */
@@ -12,6 +11,7 @@ import Contact from "./Pages/Contact"
 
 /* -----> Features <----- */
 import Cursor from './Features/Cursor'
+import Colors from './Features/BackgroundEffects/Colors'
 
 
 /* -----> Component <----- */
@@ -21,8 +21,9 @@ const App = () => {
 
   // Return JSX
   return (
-    <div className='bg-[#333333] flex flex-col h-screen'>
+    <div className='flex flex-col h-screen '>
       <Cursor />
+      <Colors />
       <BrowserRouter>
         <Header />
         <Routes>

@@ -1,9 +1,9 @@
+import { FaLinkedinIn } from "react-icons/fa";
 /* -----> Third Party Packages <----- */
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 /* -----> Icons & Logos <----- */
-import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Logo from "./../Assets/Logo"
@@ -20,11 +20,12 @@ const Header = () => {
 
     // React Elements
     const socialIcons = <>
-        <a href="https://www.linkedin.com/in/andepraveen/" target="blank">
-            <AiFillLinkedin className='w-6 h-6 text-white hover:bg-gray-600' />
+        <a href="https://www.linkedin.com/in/andepraveen/" target="blank" className="p-2 rounded-full hover:bg-gray-600">
+
+            <FaLinkedinIn className='w-6 h-6 text-white ' />
         </a>
-        <a href="https://github.com/andepraveenofficial" target="blank">
-            <AiFillGithub className='w-6 h-6 text-white hover:bg-gray-600' />
+        <a href="https://github.com/andepraveenofficial" target="blank" className="p-2 rounded-full hover:bg-gray-600">
+            <AiFillGithub className='w-6 h-6 text-white ' />
         </a>
     </>
 
@@ -45,24 +46,24 @@ const Header = () => {
                         type="button"
                         className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     >
-                        <GiHamburgerMenu className='w-7 h-7 text-white' />
+                        <GiHamburgerMenu className='text-white w-7 h-7' />
                     </button>
                 </div>
                 <div className={isMenuOpen ? 'items-center justify-between w-full md:flex md:w-auto md:order-1' : 'hidden w-full md:flex md:w-auto md:order-1'} id="navbar-sticky">
-                    <ul className="flex flex-col p-3 h-12 mt-4 font-sm rounded-lg md:bg-[#6d6d6f80] rtl:space-x-reverse md:flex-row md:mt-0 md:justify-space-between md:items-center md:p-2.5 z-50">
-                        <li className='hover:bg-gray-600'>
+                    <ul className="flex flex-col p-3 h-auto bg-[#6d6d6f80] mt-4 font-sm rounded-lg  gap-2 rtl:space-x-reverse md:flex-row md:mt-0 md:justify-space-between md:items-center md:p-2.5 z-50">
+                        <li className='rounded-full hover:bg-gray-600'>
                             <Link to="/" className="block px-3 py-2 text-white rounded " >Home</Link>
                         </li>
-                        <li className='hover:bg-gray-600'>
+                        <li className='rounded-full hover:bg-gray-600'>
                             <Link to="/about" className="block px-3 py-2 text-white rounded " >About</Link>
                         </li>
-                        <li className='hover:bg-gray-600'>
+                        <li className='rounded-full hover:bg-gray-600'>
                             <Link to="/skills" className="block px-3 py-2 text-white rounded " >Skills</Link>
                         </li>
-                        <li className='hover:bg-gray-600'>
+                        <li className='rounded-full hover:bg-gray-600'>
                             <Link to="/projects" className="block px-3 py-2 text-white rounded " >Projects</Link>
                         </li>
-                        <li className='hover:bg-gray-600'>
+                        <li className='rounded-full hover:bg-gray-600'>
                             <Link to="/contact" className="block px-3 py-2 text-white rounded" >Contact</Link>
                         </li>
                         <li>

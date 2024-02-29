@@ -10,6 +10,9 @@ import Skills from "./Pages/Skills"
 import Projects from "./Pages/Projects"
 import Contact from "./Pages/Contact"
 
+/* -----> Features <----- */
+import Cursor from './Features/Cursor'
+
 
 /* -----> Component <----- */
 const App = () => {
@@ -19,6 +22,7 @@ const App = () => {
   // Return JSX
   return (
     <div className='bg-[#333333] flex flex-col h-screen'>
+      <Cursor />
       <BrowserRouter>
         <Header />
         <Routes>

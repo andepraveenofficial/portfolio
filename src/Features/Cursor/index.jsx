@@ -32,7 +32,7 @@ const Cursor = () => {
         };
     }, []);
 
-    return <div className="cursor" ref={cursorRef}></div>;
+    return <div className="hidden cursor md:block" ref={cursorRef}></div>;
 };
 
 /* -----> Export <----- */

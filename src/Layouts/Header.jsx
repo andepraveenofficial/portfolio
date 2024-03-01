@@ -49,7 +49,7 @@ const Header = () => {
                         <GiHamburgerMenu className='text-white w-7 h-7' />
                     </button>
                 </div>
-                <div className={isMenuOpen ? 'items-center justify-between w-full md:flex md:w-auto md:order-1' : 'hidden w-full md:flex md:w-auto md:order-1'} id="navbar-sticky">
+                <div className={isMenuOpen ? 'items-center justify-between w-full md:flex md:w-auto md:order-1 z-50' : 'hidden w-full md:flex md:w-auto md:order-1 z-50'} id="navbar-sticky">
                     <ul className="flex flex-col p-3 h-auto bg-[#6d6d6f80] mt-4 font-sm rounded-lg  gap-2 rtl:space-x-reverse md:flex-row md:mt-0 md:justify-space-between md:items-center md:p-2.5 z-50">
                         <li className='rounded-full hover:bg-gray-600'>
                             <Link to="/" className="block px-3 py-2 text-white rounded " >Home</Link>

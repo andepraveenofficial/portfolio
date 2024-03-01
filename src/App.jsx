@@ -12,8 +12,8 @@ import Contact from "./Pages/Contact"
 
 /* -----> Features <----- */
 import Cursor from './Features/Cursor'
-// import Colors from './Features/BackgroundEffects/Colors'  // Added as Lazy-Loading
-const Colors = lazy(() => import('./Features/BackgroundEffects/Colors'))
+// import BackgroundEffects from "./Features/BackgroundEffects"
+const BackgroundEffects = lazy(() => import("./Features/BackgroundEffects"))
 
 
 /* -----> Component <----- */
@@ -37,7 +37,7 @@ const App = () => {
       </BrowserRouter>
       <Cursor />
       <Suspense>
-        <Colors />
+        <BackgroundEffects />
       </Suspense>
     </div>
   )

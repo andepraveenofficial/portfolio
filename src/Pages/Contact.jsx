@@ -1,14 +1,8 @@
 /* -----> External Components <----- */
-import styled from "styled-components";
 import ContactForm from "../Components/ContactForm"
 
 /* -----> Styles <----- */
-const Heading = styled.h1`
-  font-family: "Tangerine", cursive;
-  font-weight: 700;
-  font-style: normal;
-  font-size:45px;
-`;
+import { Heading } from "../StyledComponents";
 
 /* -----> Component <----- */
 const Contact = () => {

@@ -1,5 +1,4 @@
 /* -----> Third Party Packages <----- */
-import styled from "styled-components";
 import { motion } from "framer-motion";
 
 /* -----> Icons & Logos <----- */
@@ -18,12 +17,7 @@ import { DiCss3 } from "react-icons/di";
 import { AiOutlineHtml5 } from "react-icons/ai";
 
 /* -----> Styles <----- */
-const Heading = styled.h1`
-  font-family: "Tangerine", cursive;
-  font-weight: 700;
-  font-style: normal;
-  font-size:45px;
-`;
+import { Heading } from "../StyledComponents";
 
 const techICONsStyles = "hover:shadow-lg hover:transition hover:scale-110 text-8xl hover:border hover:rounded-lg p-2"
 

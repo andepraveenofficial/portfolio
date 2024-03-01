@@ -10,31 +10,10 @@ import { BsInstagram } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 
 /* -----> Styles <----- */
-const Heading = styled.h1`
-  font-family: "Tangerine", cursive;
-  font-weight: 700;
-  font-style: normal;
-  font-size:45px;
-`;
+import { Heading } from "../StyledComponents";
+import { ProjectIcon, ProjectTitle } from "../StyledComponents";
 
-// Styled component for project icons with hover effect
-const ProjectIcon = styled.div`
-  font-size: 8rem;
-  transition: all 0.3s ease-in-out;
-  color: #fff; /* Set default color */
 
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    color: ${(props) => props.hoverColor}; /* Change color on hover */
-  }
-`;
-
-const ProjectTitle = styled.p`
-  font-size: 20px;
-  color: ${(props) => props.titleColor}; /* Apply the color here */
-`;
 
 const projectICONsStyles = "hover:shadow-lg hover:transition hover:scale-110 text-8xl hover:border hover:rounded-lg p-2"
 
@@ -104,7 +83,7 @@ const Projects = () => {
                             }}
                             key={each.id}>
                             <div >
-                                <div className="flex flex-col items-center ">
+                                <div className="flex flex-col items-center gap-5">
                                     <ProjectIcon hoverColor={each.hoverColor}>
                                         {each.project}
                                     </ProjectIcon>

@@ -24,6 +24,7 @@ const ProjectIcon = styled.div`
   font-size: 8rem;
   transition: all 0.3s ease-in-out;
   color: #fff; /* Set default color */
+
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -91,7 +92,7 @@ const Projects = () => {
                             }}
                             key={each.id}>
                             <div >
-                                <div className="text-center">
+                                <div className="flex flex-col items-center ">
                                     <ProjectIcon hoverColor={each.hoverColor}>
                                         {each.project}
                                     </ProjectIcon>

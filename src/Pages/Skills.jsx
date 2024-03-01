@@ -31,10 +31,10 @@ const Skills = () => {
 
     // Return JSX
     return (
-        <div className="z-50 flex items-center justify-center flex-1 mx-8 text-white flex-column lg:mx-64">
+        <div className="z-50 flex items-center justify-center flex-1 mx-8 text-white flex-column lg:mx-96">
             <div className="flex flex-col gap-6">
                 <Heading className="text-center">My Tech Skills</Heading>
-                <div className="flex flex-row flex-wrap justify-center gap-3 ">
+                <div className="flex flex-row flex-wrap justify-center gap-3">
                     <AiOutlineHtml5 className={` hover:text-red-500 hover:shadow-outline-red ${techICONsStyles}`} />
                     <DiCss3 className={`hover:text-blue-500 hover:shadow-outline-blue ${techICONsStyles}`} />
                     <BsBootstrap className={`hover:text-purple-500 hover:shadow-outline-purple ${techICONsStyles}`} />

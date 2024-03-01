@@ -31,7 +31,7 @@ const Header = () => {
 
     // Return JSX
     return (
-        <header className="w-full ">
+        <header className="z-50 w-full">
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                     <Logo />

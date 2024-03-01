@@ -24,10 +24,7 @@ const App = () => {
   // Return JSX
   return (
     <div className='flex flex-col h-screen bg-[#333333]'>
-      <Cursor />
-      <Suspense>
-        <Colors />
-      </Suspense>
+
       <BrowserRouter>
         <Header />
         <Routes >
@@ -38,6 +35,10 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
+      <Cursor />
+      <Suspense>
+        <Colors />
+      </Suspense>
     </div>
   )
 }

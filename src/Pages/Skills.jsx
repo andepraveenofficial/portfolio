@@ -1,6 +1,6 @@
 /* -----> Third Party Packages <----- */
 import styled from "styled-components";
-import motion from "framer-motion"
+import { motion } from "framer-motion";
 
 /* -----> Icons & Logos <----- */
 import { FaFigma } from "react-icons/fa";

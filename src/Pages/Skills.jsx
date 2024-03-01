@@ -31,7 +31,7 @@ const Skills = () => {
 
     // Return JSX
     return (
-        <div className="z-50 flex items-center justify-center flex-1 mx-8 text-white flex-column lg:mx-96">
+        <div className="z-50 flex flex-col items-center justify-center flex-1 mx-8 text-white lg:mx-96">
             <div className="flex flex-col gap-6">
                 <Heading className="text-center">My Tech Skills</Heading>
                 <div className="flex flex-row flex-wrap justify-center gap-3">

@@ -15,8 +15,9 @@ Figma Drawing
 3. Routing => react-router-dom
 4. Styling => Tailwindcss, styled-components
 5. Animations => Framer Motion , tsparticles
-6. Bundler => React + Vite
-7. Testing => jest
+6. Send Mails => nodemailer
+7. Bundler => React + Vite
+8. Testing => jest
 
 ### Features
 * In future we will add 

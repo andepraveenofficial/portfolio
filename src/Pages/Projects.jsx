@@ -81,7 +81,21 @@ const Projects = () => {
     return (
         <div className="z-50 flex flex-col items-center justify-center flex-1 mx-8 text-white lg:mx-96">
             <div className="flex flex-col gap-5">
-                <Heading className="text-center">My Projects</Heading>
+                <motion.div
+                    initial={{ scale: 5 }}
+                    animate={{ rotate: 360, scale: 1 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                        delay: 0,
+                        duration: 2,
+                        ease: "easeInOut",  // Use a smoother "easeInOut" easing for the animation
+                    }}
+                >
+                    <Heading className="text-center">My Projects</Heading>
+                </motion.div>
+
                 <div className="flex flex-row flex-wrap justify-center gap-5">
                     {myProjects.map((each) =>
                         <motion.div initial={{ opacity: 0 }}

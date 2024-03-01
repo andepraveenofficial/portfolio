@@ -1,3 +1,8 @@
+/* -----> Third Party Packages <----- */
+import styled from "styled-components";
+import motion from "framer-motion"
+
+/* -----> Icons & Logos <----- */
 import { FaFigma } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { BsGit } from "react-icons/bs";
@@ -11,8 +16,6 @@ import { SiTailwindcss } from "react-icons/si";
 import { BsBootstrap } from "react-icons/bs";
 import { DiCss3 } from "react-icons/di";
 import { AiOutlineHtml5 } from "react-icons/ai";
-/* -----> Third Party Packages <----- */
-import styled from "styled-components";
 
 /* -----> Styles <----- */
 const Heading = styled.h1`
@@ -33,7 +36,21 @@ const Skills = () => {
     return (
         <div className="z-50 flex flex-col items-center justify-center flex-1 mx-8 text-white lg:mx-96">
             <div className="flex flex-col gap-6">
-                <Heading className="text-center">My Tech Skills</Heading>
+                <motion.div
+                    initial={{ scale: 5 }}
+                    animate={{ rotate: 360, scale: 1 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                        delay: 0,
+                        duration: 2,
+                        ease: "easeInOut",  // Use a smoother "easeInOut" easing for the animation
+                    }}
+                >
+                    <Heading className="text-center">My Tech Skills</Heading>
+                </motion.div>
+
                 <div className="flex flex-row flex-wrap justify-center gap-3">
                     <AiOutlineHtml5 className={` hover:text-red-500 hover:shadow-outline-red ${techICONsStyles}`} />
                     <DiCss3 className={`hover:text-blue-500 hover:shadow-outline-blue ${techICONsStyles}`} />

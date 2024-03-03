@@ -46,19 +46,19 @@ const Skills = () => {
                 </motion.div>
 
                 <div className="flex flex-row flex-wrap justify-center gap-3">
-                    <AiOutlineHtml5 className={` hover:text-red-500 hover:shadow-outline-red ${techICONsStyles}`} />
-                    <DiCss3 className={`hover:text-blue-500 hover:shadow-outline-blue ${techICONsStyles}`} />
-                    <BsBootstrap className={`hover:text-purple-500 hover:shadow-outline-purple ${techICONsStyles}`} />
-                    <SiTailwindcss className={`hover:text-teal-500 hover:shadow-outline-teal ${techICONsStyles}`} />
-                    <TbBrandJavascript className={`hover:text-yellow-500 hover:shadow-outline-yellow ${techICONsStyles}`} />
-                    <FaReact className={`hover:text-indigo-500 hover:shadow-outline-indigo ${techICONsStyles}`} />
-                    <IoLogoNodejs className={`hover:text-green-500 hover:shadow-outline-green ${techICONsStyles}`} />
-                    <SiExpress className={`hover:text-pink-500 hover:shadow-outline-pink ${techICONsStyles}`} />
-                    <DiPython className={`hover:text-orange-500 hover:shadow-outline-orange ${techICONsStyles}`} />
-                    <SiSqlite className={`hover:text-gray-500 hover:shadow-outline-gray ${techICONsStyles}`} />
-                    <BsGit className={`hover:text-red-500 hover:shadow-outline-red ${techICONsStyles}`} />
-                    <AiFillGithub className={`hover:text-blue-500 hover:shadow-outline-blue ${techICONsStyles}`} />
-                    <FaFigma className={`hover:text-purple-500 hover:shadow-outline-purple ${techICONsStyles}`} />
+                    <AiOutlineHtml5 className={` text-red-500 hover:shadow-outline-red ${techICONsStyles}`} />
+                    <DiCss3 className={`text-blue-500 hover:shadow-outline-blue ${techICONsStyles}`} />
+                    <BsBootstrap className={`text-purple-500 hover:shadow-outline-purple ${techICONsStyles}`} />
+                    <SiTailwindcss className={`text-teal-500 hover:shadow-outline-teal ${techICONsStyles}`} />
+                    <TbBrandJavascript className={`text-yellow-500 hover:shadow-outline-yellow ${techICONsStyles}`} />
+                    <FaReact className={`text-indigo-500 hover:shadow-outline-indigo ${techICONsStyles}`} />
+                    <IoLogoNodejs className={`text-green-500 hover:shadow-outline-green ${techICONsStyles}`} />
+                    <SiExpress className={`text-pink-500 hover:shadow-outline-pink ${techICONsStyles}`} />
+                    <DiPython className={`text-orange-500 hover:shadow-outline-orange ${techICONsStyles}`} />
+                    <SiSqlite className={`text-gray-500 hover:shadow-outline-gray ${techICONsStyles}`} />
+                    <BsGit className={`text-red-500 hover:shadow-outline-red ${techICONsStyles}`} />
+                    <AiFillGithub className={`text-blue-500 hover:shadow-outline-blue ${techICONsStyles}`} />
+                    <FaFigma className={`text-purple-500 hover:shadow-outline-purple ${techICONsStyles}`} />
                 </div>
                 <p className="text-base text-center">While the world searches for profound truths, I'm here fixing those pesky missing semicolons. Coding is my art, and I turn caffeine into creativity, one line at a time.</p>
             </div>

@@ -1,3 +1,4 @@
+import Markdown from "../Components/Markdown"
 import Sidebar from "../Layouts/Sidebar"
 
 /* -----> Component <----- */
@@ -10,7 +11,7 @@ const Learning = () => {
             <div>
                 <Sidebar />
             </div>
-            <div>My Learning page on Working</div>
+            <div><Markdown /></div>
         </div>
     )
 }

@@ -16,9 +16,10 @@ Figma Drawing
 4. Styling => Tailwindcss, styled-components
 5. Animations => Framer Motion , tsparticles
 6. 3D Animation => @react-three/fiber
-1. Send Mails => nodemailer
-1. Bundler => React + Vite
-1. Testing => jest
+7. Send Mails => nodemailer
+8. Bundler => React + Vite
+9. Markdown Render => @mdx-js/rollup, theme - @code-hike/mdx
+10. Testing => jest
 
 ### Features
 * In future we will add 

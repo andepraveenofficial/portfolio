@@ -1,6 +1,14 @@
-import { GiHamburgerMenu } from "react-icons/gi";
+
 /* -----> Third Party Packages <----- */
 import { useState } from "react";
+
+
+/* -----> Logos & Icons <----- */
+import { GiHamburgerMenu } from "react-icons/gi";
+
+/* -----> Redux Actions <----- */
+import { setMarkdown } from "./../Store/markdownSlice"
+import { useDispatch } from "react-redux";
 
 /* -----> Component <----- */
 const Sidebar = () => {
@@ -14,6 +22,9 @@ const Sidebar = () => {
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
+
+    // Redux 
+    const dispatch = useDispatch()
 
     // Return JSX
     return (
@@ -38,22 +49,22 @@ const Sidebar = () => {
                 </div>
             </div>
             <div className={`text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold ${isSubMenuOpen ? '' : 'hidden'}`} id="submenu">
-                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600" onClick={() => dispatch(setMarkdown("html"))}>
                     HTML
                 </h1>
-                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600" onClick={() => dispatch(setMarkdown("css"))}>
                     CSS
                 </h1>
-                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600" onClick={() => dispatch(setMarkdown("javascript"))}>
                     Javascript
                 </h1>
-                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600" onClick={() => dispatch(setMarkdown("react"))}>
                     ReactJS
                 </h1>
-                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600" onClick={() => dispatch(setMarkdown("python"))}>
                     Python
                 </h1>
-                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+                <h1 className="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600" onClick={() => dispatch(setMarkdown("sqlite"))}>
                     SQLite
                 </h1>
             </div>

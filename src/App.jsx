@@ -2,6 +2,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Suspense, lazy } from "react"
 
+/* -----> Redux Store <----- */
+import appStore from './Store/appStore'
+import { Provider } from 'react-redux'
+
 /* -----> External Components <----- */
 import Header from './Layouts/Header'
 import Home from './Pages/Home'
@@ -24,24 +28,26 @@ const App = () => {
 
   // Return JSX
   return (
-    <div className='flex flex-col h-screen bg-[#333333]'>
+    < Provider store={appStore} >
+      <div className='flex flex-col h-screen bg-[#333333]'>
 
-      <BrowserRouter>
-        <Header />
-        <Routes >
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/learning" element={<Learning />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-      <Cursor />
-      <Suspense>
-        <BackgroundEffects />
-      </Suspense>
-    </div>
+        <BrowserRouter>
+          <Header />
+          <Routes >
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/learning" element={<Learning />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+        <Cursor />
+        <Suspense>
+          <BackgroundEffects />
+        </Suspense>
+      </div>
+    </Provider >
   )
 }
 

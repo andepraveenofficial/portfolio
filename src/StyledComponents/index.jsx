@@ -7,7 +7,6 @@ export const Heading = styled.h1`
   font-size:45px;
 `;
 
-
 export const ProjectIcon = styled.div`
   font-size: 8rem;
   transition: all 0.3s ease-in-out;

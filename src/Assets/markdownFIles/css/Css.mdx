@@ -32,7 +32,7 @@ __CSS__ stands for __Cascading Style Sheets__
 * Once we create a style sheet with .css file, we can use it for multiple .html files.
 
 ##### Syntax
-```CSS
+```css
 selector{
    property1:value1;
    property2:value2;
@@ -48,7 +48,7 @@ We can apply __CSS__ in 3 ways,
 
 ##### **Inline**  
 we can use `style` attribute to apply css styles to a particular element.
-```HTML
+```html
     <tag style="property1: value1; property2: value2;">Content</tag>
 ```
 
@@ -56,7 +56,7 @@ we can use `style` attribute to apply css styles to a particular element.
 we can use `style` element to write `css code` for a particular HTML document.  
 we use `style` element in head part.
 
-```HTML 
+```html 
 <!DOCTYPE html>
 <html>
   <head>
@@ -77,7 +77,7 @@ we use `style` element in head part.
 we can create External CSS Style Sheet with `.css` file extension.    
 by using the HTML `link` element to link the External CSS file.  
 
-```HTML 
+```html 
 <!DOCTYPE html>
 <html>
   <head>
@@ -89,7 +89,7 @@ by using the HTML `link` element to link the External CSS file.
 </html>
 ```
 
-```CSS 
+```css 
 .heading{
     color:green;
     background-color:orange;
@@ -106,7 +106,7 @@ by using the HTML `link` element to link the External CSS file.
 
 ##### Inheritance
 Children Inherits the Parent Property is called Inheritance.
-```CSS 
+```css 
 .parent{
     color:blue;  /*  Inherited Property */
     border:2px black solid;  /*  Non-Inherited Property */
@@ -161,13 +161,13 @@ selector priority from High to Low:
 
 ##### Tag Selector
 
-```HTML 
+```html 
  <p>I am Tag Selector</p>
  <p>I am Tag Selector</p>
  <p>I am Tag Selector</p>
 ```
 
-```CSS 
+```css 
 p{
     color:red;
     background-color: yellow;
@@ -175,13 +175,13 @@ p{
 ```
 
 ##### Id Selector
-```HTML 
+```html 
  <p id="myParagraph">I am ID Selector</p>
  <p>I am Tag Selector</p>
  <p>I am Tag Selector</p>
 ```
 
-```CSS 
+```css 
 #myParagraph{
     color:red;
     background-color: yellow;
@@ -192,13 +192,13 @@ p{
 We can provide multiple class names separated by space as a value to the HTML class attribute.
 `<tag class="name1 name2 name3 name4 ...">Content</tag>`
 
-```HTML 
+```html 
  <p id="myParagraph">I am ID Selector</p>
  <p class="my-paragraph">I am Tag Selector</p>
  <p class="my-paragraph">I am Tag Selector</p>
 ```
 
-```CSS 
+```css 
 .my-paragraph{
     color:red;
     background-color: yellow;
@@ -207,12 +207,12 @@ We can provide multiple class names separated by space as a value to the HTML cl
 
 ##### Attribute Selector
 
-```HTML 
+```html 
 <input type="text" placeholder="textbox">
 <input type="password" placeholder="password">
 ```
 
-```CSS 
+```css 
 input[type]{
     padding:10px;
     border-radius: 10px;
@@ -227,12 +227,12 @@ input[type="password"]{
 Pseudo selector is a dynamic selector  
 `selector:event`
 
-```HTML 
+```html 
     <h1 class="heading-element">Please put cursor on me</h1>
     <input class="textbox" type="text" placeholder="please focus on me"/>
 ```
 
-```CSS 
+```css 
 .heading-element:hover{
     box-shadow:0 0 10px black;
 }
@@ -245,14 +245,14 @@ Pseudo selector is a dynamic selector
 
 ##### Mixed Selector
 
-```HTML 
+```html 
    <div class="parent">
         <h1 id="#child">I am First Child</h1>
         <h1>I am Second Child</h1>
    </div>
 ```
 
-```CSS 
+```css 
 .parent #child{
     padding:10px;
     color:orange;
@@ -261,7 +261,7 @@ Pseudo selector is a dynamic selector
 }
 ```
 
-```CSS 
+```css 
 .parent>#child{
     padding:10px;
     color:orange;
@@ -272,12 +272,12 @@ Pseudo selector is a dynamic selector
 
 ##### Group Selection
 
-```HTML 
+```html 
    <h1 class="my-heading">Class Selection</h1>
    <h1 id="myHeading">Id Selection</h1>
 ```
 
-```CSS 
+```css 
 .my-heading, #myHeading{
     padding: 10px;
     background-color: green;
@@ -289,13 +289,13 @@ Pseudo selector is a dynamic selector
 ##### Universal Selector
 The universal selector selects all the HTML elements in an HTML document.  
 
-```HTML 
+```hml 
 <div>1</div>
 <div id="myBox">2</div>
 <div class="my-box">3</div>
 ```
 
-```CSS 
+```css 
 * {
     margin: 20px;
 }
@@ -407,7 +407,8 @@ The universal selector selects all the HTML elements in an HTML document.
 
 
 ##### All Backgrounds Shortcut
-```CSS
+
+```css
 shortcut{
 background:color image repeat attachment position;
 }
@@ -510,7 +511,7 @@ Box-Sizing property has the following values:
 
 * __content-box__(Default) :
 
-```CSS 
+```css 
 .container {
   width: 160px;
   height: 80px;
@@ -528,7 +529,7 @@ Box-Sizing property has the following values:
 ```
 * __border-box__:
 
-```CSS 
+```css 
 .container {
   width: 160px;
   height: 80px;
@@ -645,7 +646,7 @@ If the value of align-self is auto, then the align-items value of its Flex conta
     - +ve values
     - -ve values
 
-```HTML 
+```html 
 <!DOCTYPE html>
 <html>
 <head>
@@ -689,7 +690,7 @@ If the value of align-self is auto, then the align-items value of its Flex conta
 ##### Grid
 This is used to create the Layout.
 
-```CSS 
+```css 
 .grid-container {
    display: grid;
 }
@@ -702,7 +703,7 @@ It occupies entire horizontal space of its Parent.
 * The inline element does not start on a new line.
 It occupies only its content width.
 
-```HTML 
+```html 
     .selector1 {
         display:block;
     }
@@ -727,7 +728,7 @@ Using Media queries, we can conditionally apply styles based on the device type 
 
 ##### syntax:
 
-```CSS 
+```css 
 @media media-type and (media-feature-expression){
 
 /* CSS rules go here */
@@ -746,7 +747,7 @@ possible types of media are:
 * all => Matches all types of devices and more...
 
 ##### screen
-```CSS
+```css
 @media screen and (max-width: 800px) {
     .bg-container {
         background-color: deepskyblue;
@@ -771,7 +772,7 @@ possible types of media are:
 using `and` operator can combine multiple Media Features.  
 syntax:
 
-```CSS
+```css
 @media (media-feature-expression) and (media-feature-expression){
 /* CSS rules go here */
 }
@@ -780,7 +781,7 @@ syntax:
 we can also join media feature with a media type.
 syntax:  
 
-```CSS 
+```css 
 @media media-type and (media-feature-expression){
 /* CSS rules go here */
 }
@@ -792,7 +793,7 @@ If you use the not operator, you must also specify a media type.
 
 syntax:
 
-```CSS 
+```css 
 @media not screen and (min-width:600px){
 	/* CSS rules go here */
 }
@@ -800,7 +801,7 @@ syntax:
 
 ##### comma
 Using ,(comma) operator we can combine multiple Media Queries.
-```CSS 
+```css 
 @media (orientation: landscape), (min-width: 600px) {
     .bg-container {
         background: yellowgreen;
@@ -816,7 +817,7 @@ The two most common types of orientation are:
 landscape => The width of the device is greater than the height.
 portrait => The height of the device is greater than the width.
 
-```CSS 
+```css 
 
 @media (orientation: landscape) {
     .bg-container {
@@ -832,7 +833,7 @@ portrait => The height of the device is greater than the width.
 ```
 
 ##### print
-```CSS 
+```css 
 @media print {
     .heading {
         color: green;
@@ -872,7 +873,7 @@ The position property in CSS is used to control the positioning of an element wi
 z-index =>  layers position  
 `z-index:1;`
 
-```CSS 
+```css 
 .selector{
     background-color:yellow;
     position:absolute;
@@ -911,7 +912,7 @@ A CSS custom property is a variable in CSS.
 * variable creation : --variable
 * use variable : var(--variable)
 
-```CSS 
+```css 
 .card {
   --spacing: 2px;
   padding: var(--spacing);
@@ -921,7 +922,7 @@ A CSS custom property is a variable in CSS.
 
 If the custom property has to be accessed through the entire HTML document, declare it inside the :root pseudo-class.
 
-```CSS 
+```css 
 :root {
   --main-bg-color: brown;
 }
@@ -949,7 +950,7 @@ To create animations using CSS, you can use the __@keyframes__ rule along with C
 4. `animation-timing-function:linear / ease-in / ease-out;`
 5. `animation-delay:3s;`
 
-```CSS 
+```css 
 shortcut{
 animation:name duration iteration-count timing-function delay;
 }
@@ -959,13 +960,13 @@ animation:name duration iteration-count timing-function delay;
 step1 => define your element
 step2 => apply animation rules
 
-```CSS 
+```css 
 .myAnimation:hover{
     animation:animationEffects 2s infinite linear 1s;
 }
 ```
 
-```CSS 
+```css 
 @keyframes animationEffects {
     0%{
         background-color:green;

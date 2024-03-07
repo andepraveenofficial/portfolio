@@ -9,7 +9,9 @@ import REACT from "./../Assets/markdownFIles/react/react.mdx"
 import PYTHON from "./../Assets/markdownFIles/python/Python.mdx"
 import SQLITE from "./../Assets/markdownFIles/sqlite/SQLite.mdx"
 
+/* -----> Styles <----- */
 import "@code-hike/mdx/styles"  // Styles
+import MarkdownStyles from "../StyledComponents/MarkdownStyles"
 
 const Markdown = () => {
 
@@ -34,7 +36,11 @@ const Markdown = () => {
     }
 
     return (
-        <div className="w-screen bg-[#333] max-w-screen-2xl">{renderMarkDown()}</div>
+
+        <div className="w-screen bg-[#333] max-w-screen-2xl" >
+            <MarkdownStyles >{renderMarkDown()}</MarkdownStyles>
+
+        </div>
     )
 }
 

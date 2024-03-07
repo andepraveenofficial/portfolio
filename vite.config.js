@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-
 // Markdown 
 import { remarkCodeHike } from "@code-hike/mdx"  // Styles
 
@@ -18,5 +17,6 @@ export default defineConfig(async () => {
         remarkPlugins: [[remarkCodeHike, { theme: "material-palenight" }]],
       }),
     ],
+  
   }
 })

@@ -34,7 +34,7 @@ const Markdown = () => {
     }
 
     return (
-        <div className="w-auto bg-[#333]">{renderMarkDown()}</div>
+        <div className="w-screen bg-[#333] max-w-screen-2xl">{renderMarkDown()}</div>
     )
 }
 

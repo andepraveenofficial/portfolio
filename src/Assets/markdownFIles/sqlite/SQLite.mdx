@@ -110,7 +110,7 @@ __CRUD__ operations:
 
 ##### Create Table
 
-```SQL 
+```sql 
 CREATE TABLE player(
     name VARCHAR(200),
     age INTEGER,
@@ -131,13 +131,13 @@ CREATE TABLE player(
 
 ##### Table Information
 
-```SQL 
+```sql 
     PRAGMA TABLE_INFO(player);
 ```
 
 ##### Inserting ROWS
 
-```SQL 
+```sql 
 INSERT INTO 
      player(name, age, score)
 VALUES 
@@ -148,14 +148,14 @@ VALUES
 ##### Retrieving Data
 
 ##### Selecting All Columns
-```SQL 
+```sql 
 SELECT * 
 FROM player;
 ```
 
 ##### Select Specific Column
 
-```SQL 
+```sql 
 SELECT 
      name, 
      age
@@ -167,7 +167,7 @@ FROM
 
 `WHERE` clause specifies a condition that has to be satisfied for retrieving the data from a database.
 
-```SQL 
+```sql 
 SELECT *
 FROM player
 WHERE name = "Sai";
@@ -177,7 +177,7 @@ WHERE name = "Sai";
 
 ##### Update All Rows
 
-```SQL 
+```sql 
 UPDATE 
     player
 SET 
@@ -186,7 +186,7 @@ SET
 
 ##### Update Specific Rows
 
-```SQL
+```sql
 UPDATE 
     player
 SET 
@@ -198,13 +198,13 @@ WHERE
 ##### Delete Rows
 
 ##### Delete All Rows
-```SQL 
+```sql 
 DELETE FROM 
     player;
 ```
 
 ##### Delete Specific Rows
-```SQL 
+```sql 
 DELETE FROM 
     player
 WHERE 
@@ -213,21 +213,21 @@ WHERE
 
 ##### Drop Table
 `DROP` clause is used to delete a table from the database.
-```SQL 
+```sql 
 DROP TABLE player;
 ```
 
 ##### Alter Table 
 `Alter` clause is used to __add__, __delete__, or __modify__ columns in an existing table. Default values for newly added columns in the existing rows will be __NULL__.
 
-```SQL 
+```sql 
 ALTER TABLE 
    player
 ADD 
    jersey_num INT
 ```
 
-```SQL 
+```sql 
 ALTER TABLE 
     player RENAME COLUMN jersey_num TO jersey_number;
 ```
@@ -273,7 +273,7 @@ ALTER TABLE
 | Pattern Matching  | `WHERE name LIKE "a_%"`      | Retrieves products whose name starts with "a" and has at least 2 characters in length |
 
 
-```SQL 
+```sql 
 SELECT
   *
 FROM
@@ -283,7 +283,7 @@ WHERE
 ```
 
 Get all the products which have exactly 5 characters in brand from the product table.
-```SQL 
+```sql 
 SELECT
   *
 FROM
@@ -304,7 +304,7 @@ with logical operators, we can perform queries based on multiple conditions.
 | OR       | Used to fetch rows that satisfy at least one of the given conditions. |
 | NOT      | Used to negate a condition in the WHERE clause.     |
 
-```SQL 
+```sql 
 SELECT
   *
 FROM
@@ -314,7 +314,7 @@ WHERE
   AND price <= 1000;
 ```
 
-```SQL 
+```sql 
 -- Ignore all the products with name containing "Cake" from the list of products.
 SELECT  
   *
@@ -325,7 +325,7 @@ WHERE
 ``` 
 ![Logical Operators](./Assets/logical-operators.png)
 
-```SQL 
+```sql 
 SELECT
   *
 FROM
@@ -338,7 +338,7 @@ WHERE
 
 Above query is equal to below code
 
-```SQL 
+```sql 
 SELECT
     *
 FROM
@@ -353,7 +353,7 @@ WHERE
 Retrieves the corresponding rows from the table if the value of column(c1) is present in the given values(v1,v2,..).
 ![IN Operator](./Assets/in-operator.png)
 
-```SQL 
+```sql 
 SELECT
   *
 FROM
@@ -366,7 +366,7 @@ WHERE
 Retrieves all the rows from table that have cloumn(c1) value present between the given range(v1 and v2).
 ![BETWEEN Operator](./Assets/between_operator.png)
 
-```SQL 
+```sql 
 SELECT
   name,
   price,
@@ -385,7 +385,7 @@ Note : When using the BETWEEN operator, the first value should be less than seco
 Arrange Ascending order or Descending order.
 `column1 ASC / DESC,`
 
-```SQL 
+```sql 
 SELECT
   name,
   price,
@@ -402,7 +402,7 @@ ORDER BY
 ##### DISTINCT
 `DISTINCT` clause is used to return the distinct i.e unique values.
 
-```SQL 
+```sql 
 SELECT
   DISTINCT brand
 FROM
@@ -426,7 +426,7 @@ we get limited data only.
 ##### LIMIT
 LIMIT clause is used to specify the number of rows(n) we would like to have in result.
 
-```SQL 
+```sql 
 SELECT
   name,
   price,
@@ -443,7 +443,7 @@ LIMIT 2;
 ##### OFFSET
 OFFSET clause is used to specify the position (from nth row) from where the chunk of the results are to be selected.
 
-```SQL 
+```sql 
 SELECT
   name,
   price,
@@ -478,7 +478,7 @@ Combining multiple values into a single value is called aggregation.
 
 ![Agregation SUM](./Assets/aggregation_sum.gif)
 
-```SQL 
+```sql 
 SELECT
   SUM(score)
 FROM
@@ -487,7 +487,7 @@ WHERE
   name = "Ram";
 ```
 
-```SQL 
+```sql 
 SELECT
   MAX(score),
   MIN(score)
@@ -497,7 +497,7 @@ WHERE
   year = 2011;
 ```
 
-```SQL 
+```sql 
  SELECT COUNT(*)    
  FROM player_match_details;
 ```
@@ -529,7 +529,7 @@ FROM
 ##### GROUP BY 
 The `GROUP BY` clause in SQL is used to group rows which have same values for the mentioned attributes.
 
-```SQL 
+```sql 
 SELECT
   name, SUM(score) as total_score
 FROM
@@ -538,7 +538,7 @@ GROUP BY name;
 ```
 ![GROUP BY](./Assets/group_by.gif)
 
-```SQL 
+```sql 
 SELECT
  name, COUNT(*) AS half_centuries
 FROM 
@@ -551,7 +551,7 @@ GROUP BY name;
 ##### HAVING
 `HAVING` clause is used to filter the resultant rows after the application of `GROUP BY` clause.
 
-```SQL 
+```sql 
 SELECT
   name,
   count(*) AS half_centuries
@@ -577,7 +577,7 @@ HAVING
 
 ##### Using Expressions in SELECT Clause
 
-```SQL 
+```sql 
 SELECT 
     id, name, (collection_in_cr-budget_in_cr) as profit
 FROM
@@ -586,7 +586,7 @@ FROM
 
 ##### Using Expressions in WHERE Clause
 
-```SQL 
+```sql 
 SELECT
    *
 FROM
@@ -596,14 +596,14 @@ WHERE
 ```
 
 ##### Using Expressions in UPDATE Clause
-```SQL 
+```sql 
 UPDATE movie
 SET rating = rating/2;
 ```
 
 ##### Expressions in HAVING Clause
 
-```SQL 
+```sql 
 SELECT
   genre
 FROM
@@ -636,7 +636,7 @@ HAVING
 | %d     | Day of the month      | 01 - 31                | `strftime("%d", field_name)` | Extract Day         |
 | %H     | Hour                  | 00 - 24                | `strftime("%H", field_name)` | Extract Hour        |
 
-```SQL 
+```sql 
 SELECT 
     strftime('%m', release_date) as month,
     COUNT(*) as total_movies
@@ -652,7 +652,7 @@ GROUP BY
 In database management systems, the CAST function is used to convert a value from one data type to another data type.   
 `CAST(value AS data_type);`
 
-```SQL 
+```sql 
 SELECT
   strftime('%m', release_date) AS MONTH,
   COUNT(*) AS total_movies
@@ -681,7 +681,7 @@ Arithmetic functions in SQL are used to perform mathematical operations on numer
 | CEIL | 3   | 4   | 4   | 6   |
 | ROUND| 2   | 4   | 4   | 6   |
 
-```SQL 
+```sql 
 SELECT
   name,
   ROUND(collection_in_cr, 1) AS RoundedValue,
@@ -699,7 +699,7 @@ String functions in SQL are used to manipulate and operate on string values or c
 | UPPER()      | Converts a string to upper case       |
 | LOWER()      | Converts a string to lowercase         |
 
-```SQL 
+```sql 
 SELECT
   name
 FROM
@@ -718,7 +718,7 @@ WHERE
 ### CASE Clause
 SQL provides __CASE__ clause to perform conditional operations. This is similar to the switch case / if-else conditions in other programming languages.
 
-```SQL 
+```sql 
 SELECT id, name,
   CASE
     WHEN collection_in_cr - budget_in_cr <= 100 THEN collection_in_cr - budget_in_cr * 0.1
@@ -743,7 +743,7 @@ The SQL Set operation is used to combine the two or more SQL queries.
 3. UNION
 4. UNION ALL
 
-```SQL 
+```sql 
 SELECT actor_id
 FROM cast
 WHERE movie_id=6
@@ -755,7 +755,7 @@ FROM cast
 WHERE movie_id=15;
 ```
 
-```SQL 
+```sql 
 SELECT actor_id
 FROM cast
 WHERE movie_id=6
@@ -767,7 +767,7 @@ FROM cast
 WHERE movie_id=15;
 ```
 
-```SQL 
+```sql 
 SELECT actor_id
 FROM cast
 WHERE movie_id=6
@@ -815,6 +815,7 @@ ORDER BY 1 DESC;
 | Operator  | How to Use It                    | Functionality                                                                                      |
 | --------- | -------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `<>`        | WHERE col `<>` 5                  | Filters rows where the given column is not equal to 5 (Other comparison operators: `=, >, <, >=, <=`) |
+| <>        | WHERE col <> 5                  | Filters rows where the given column is not equal to 5 (Other comparison operators: =, >, <, >=, <=) |
 | LIKE      | WHERE col LIKE '%Apple%'        | Retrieves rows where the column contains 'apple' within the text                               |
 | AND       | WHERE col1 > 5 AND col2 < 3     | Retrieves rows that satisfy all the given conditions                                              |
 | OR        | WHERE col1 > 5 OR col2 < 3      | Retrieves rows that satisfy at least one of the given conditions                                   |
@@ -849,7 +850,7 @@ ORDER BY 1 DESC;
 ### Relational Database
 
 ##### Customer Table
-```SQL 
+```sql 
 CREATE TABLE customer (
    id INTEGER NOT NULL PRIMARY KEY,
    name VARCHAR(250),
@@ -859,7 +860,7 @@ CREATE TABLE customer (
 
 ##### Product Table
 
-```SQL 
+```sql 
 CREATE TABLE product (
   id INTEGER NOT NULL PRIMARY KEY,
   name VARCHAR(250),
@@ -871,7 +872,7 @@ CREATE TABLE product (
 
 ##### Address Table
 
-```SQL 
+```sql 
 CREATE TABLE address(
   id INTEGER NOT NULL PRIMARY KEY,
   pin_code INTEGER,
@@ -884,7 +885,7 @@ CREATE TABLE address(
 
 ##### Cart Table
 
-```SQL 
+```sql 
 CREATE TABLE cart(
   id INTEGER NOT NULL PRIMARY KEY,
   customer_id INTEGER NOT NULL UNIQUE,
@@ -894,7 +895,7 @@ CREATE TABLE cart(
 ```
 
 ##### Cart Product Table (Junction Table)
-```SQL 
+```sql 
 CREATE TABLE cart_product(
   id INTEGER NOT NULL PRIMARY KEY,
   cart_id INTEGER,
@@ -919,7 +920,7 @@ JOINS are used to combining the tables.
 
 ![NATURAL JOIN](./Assets/natural_join.gif)
 
-```SQL 
+```sql 
 SELECT course.name,
   instructor.full_name
 FROM course
@@ -932,7 +933,7 @@ WHERE instructor.full_name = "Alex";
 
 ![INNER JOIN](./Assets/inner_join.gif)
 
-```SQL 
+```sql 
 SELECT student.full_name,
    review.content,
    review.created_at
@@ -947,7 +948,7 @@ In `LEFT JOIN`, for each row in the left table, matched rows from the right tabl
 
 ![LEFT JOIN](./Assets/left_join.gif)
 
-```SQL 
+```sql 
 SELECT student.full_name
 FROM 
     student LEFT JOIN student_course
@@ -958,7 +959,7 @@ WHERE student_course.id IS NULL;
 ##### Joins on Multiple Tables
 We can also perform join on a combined table.
 
-```SQL 
+```sql 
 SELECT T.name AS course_name,
    student.full_name
 FROM 
@@ -975,7 +976,7 @@ I.e., in RIGHT JOIN, for each row in the right table, matched rows from the left
 
 ![RIGHT JOIN](./Assets/right_join.gif)
 
-```SQL 
+```sql 
 SELECT course.name,
     instructor.full_name
 FROM 
@@ -988,7 +989,7 @@ FROM
 
 ![FULL JOIN](./Assets/full-join.gif)
 
-```SQL 
+```sql 
 SELECT course.name,
     instructor.full_name
 FROM 
@@ -1002,7 +1003,7 @@ Cross Join is also called as CARTESIAN JOIN
 
 ![CROSS JOIN](./Assets/cross_join.gif)
 
-```SQL 
+```sql 
 SELECT 
     course.name AS course_name,
     instructor.full_name AS instructor_name
@@ -1013,7 +1014,7 @@ FROM
 ##### SELF JOIN
 So far, we have learnt to combine different tables. We can also combine a table with itself. This kind of join is called SELF-JOIN.
 
-```SQL 
+```sql 
 SELECT sc1.student_id AS student_id1,
   sc2.student_id AS student_id2, sc1.course_id
 FROM
@@ -1043,7 +1044,7 @@ WHERE
 ### SubQueries
 We can write nested queries, i.e., a query inside another query.
 
-```SQL 
+```sql 
 SELECT
    name,
    (
@@ -1055,7 +1056,7 @@ FROM product
 WHERE category = "WATCH";
 ```
 
-```SQL 
+```sql 
 SELECT
   order_id
 FROM

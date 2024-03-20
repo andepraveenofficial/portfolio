@@ -814,14 +814,14 @@ ORDER BY 1 DESC;
 
 | Operator  | How to Use It                    | Functionality                                                                                      |
 | --------- | -------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `<>`        | WHERE col `<>` 5                  | Filters rows where the given column is not equal to 5 (Other comparison operators: `=, >, <, >=, <=`) |
-| <>        | WHERE col <> 5                  | Filters rows where the given column is not equal to 5 (Other comparison operators: =, >, <, >=, <=) |
-| LIKE      | WHERE col LIKE '%Apple%'        | Retrieves rows where the column contains 'apple' within the text                               |
-| AND       | WHERE col1 > 5 AND col2 < 3     | Retrieves rows that satisfy all the given conditions                                              |
-| OR        | WHERE col1 > 5 OR col2 < 3      | Retrieves rows that satisfy at least one of the given conditions                                   |
-| NOT       | WHERE NOT col = 'apple'         | Retrieves rows if the condition(s) are NOT TRUE                                                    |
-| IN        | WHERE col IN ('Apple', 'Microsoft') | Retrieves rows if the column value matches any of the given values                       |
-| BETWEEN   | WHERE col BETWEEN 3 AND 5      | Retrieves rows where the column value falls within the specified range (inclusive)              |
+| `<>`        | `WHERE col <> 5 `                 | Filters rows where the given column is not equal to 5 (Other comparison operators: `=, >, <, >=, <=`) |
+| `<>`        | `WHERE col <> 5`                  | Filters rows where the given column is not equal to 5 (Other comparison operators: `=, >, <, >=, <=`) |
+| LIKE      | `WHERE col LIKE '%Apple%'`        | Retrieves rows where the column contains 'apple' within the text                               |
+| AND       | `WHERE col1 > 5 AND col2 < 3`     | Retrieves rows that satisfy all the given conditions                                              |
+| OR        | `WHERE col1 > 5 OR col2 < 3`      | Retrieves rows that satisfy at least one of the given conditions                                   |
+| NOT       | `WHERE NOT col = 'apple'`         | Retrieves rows if the condition(s) are NOT TRUE                                                    |
+| IN        | `WHERE col IN ('Apple', 'Microsoft')` | Retrieves rows if the column value matches any of the given values                       |
+| BETWEEN   | `WHERE col BETWEEN 3 AND 5`      | Retrieves rows where the column value falls within the specified range (inclusive)              |
 
 ##### Functions
 

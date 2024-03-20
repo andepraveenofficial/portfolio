@@ -32,9 +32,6 @@ const MarkdownStyles = styled.div`
           width:100% !important; 
        max-width:720px !important;
     }
-
-
-
   
   table{
   border-collapse: collapse;
@@ -42,12 +39,9 @@ const MarkdownStyles = styled.div`
   margin: 0 auto; 
   }
 
-
 thead{
 background-color: #f0f0f0; 
 }
-
-
 
 tr{
 border-bottom: 1px solid #ddd; 
@@ -55,13 +49,11 @@ border-bottom: 1px solid #ddd;
     background-color: #f5f5f5;
 }
   
-
 th{
   padding: 10px;
   text-align: left; 
   font-weight: bold;
 }
-
 
 td{
  padding: 10px;

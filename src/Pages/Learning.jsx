@@ -11,7 +11,7 @@ const Learning = () => {
             <div>
                 <Sidebar />
             </div>
-            <div className="mb-5"><Markdown /></div>
+            <div className="m-5"><Markdown /></div>
         </div>
     )
 }

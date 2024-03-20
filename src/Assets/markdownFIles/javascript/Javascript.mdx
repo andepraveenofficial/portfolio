@@ -7,7 +7,7 @@
 
 ### Index
 
-- General
+- Introduction
 - variables  
 - Scope
 - JS Environment
@@ -20,6 +20,9 @@
 - String Methods
 - Array Methods
 - Object
+- Set
+- Map
+- Built-in Methods
 - DOM
 - Storage
 - Class
@@ -35,15 +38,15 @@
 ---
 
 <details>
-<summary>General</summary>
+<summary>Introduction</summary>
 
-### General
+### Introduction
 
 ##### What is **Javascript**?  
 __JavaScript__ is a scripting language for web pages.  
 we can also use Javascript on server-side as __Node JS__.
 
-we can create Dynamic Webpages by combining HTML with Javascript.
+we can create Dynamic Webpages by combining HTML and Javascript.
 
 ##### Javascript Advantages
   - Server interaction is less.
@@ -55,6 +58,8 @@ Yes, JavaScript is a dynamically typed language.
 * We can declare a variable without specifying the data type.
 * Javascript itself check and identify type of variable based on given value.
 * We can change the data type of the variable when it is re-assigned.
+
+* Strictly Typed language : Java, Typescript
 
 #####  Display Javascript Output
 
@@ -139,13 +144,11 @@ const variable maintain constant values.
 
 ##### Differences between __var__, __let__ and __const__
 
-
 | **Declaration Keyword** | **Possible**                                   | **Not-Possible**              |
 |-------------------------|------------------------------------------------|-------------------------------|
 | **__var__**             | Initialization , Re-Assignment, Re-Declaration |                               |
 | **__let__**             | Initialization , Re-Assignment                 | Re-Declaration                |
 | **__const__**           | Initialization                                 | Re-Assignment, Re-Declaration |
-
 
 ##### Types of Variables
 1. Local Variable
@@ -351,7 +354,7 @@ callstack plays an important role in managing the execution of a program.
 
 callstack handles, automatically create & delete operations of Execution Context.
 
-When a function is invoked, a new execution context is added to the top of the call stack. Once the function execution is completed, its execution context is removed from the top of the call stack.
+When a function is invoked, a new execution context is added to the top of the call stack. Once the function execution is completed (returned some value), its execution context is removed from the top of the call stack.
 
 ##### Hoisting
 Hoisting is a javascript mechanism where __function declarations__ and __var__ keyword variables are moved to the top of their scope before code execution.
@@ -804,9 +807,11 @@ we can send functions as arguments, we can use function as a values ...etc
 function sayHello() {
   return "Hello, ";
 }
+
 function greeting(helloMessage, name) {
   console.log(helloMessage() + name);
 }
+
 // Pass `sayHello` as an argument to `greeting` function
 greeting(sayHello, "JavaScript!");
 // Hello, JavaScript!
@@ -936,7 +941,7 @@ promise
 ##### Event Loop
 Event Loop continuously monitoring whether callstack is empty or not.  
 if callstack is empty then checks the Microtask Queue & callback Queue. 
-if there is any Microtask functions or callback functions , it automatically pushes it into the callstack then delete from queue.  
+if there is any Microtask functions (tasks) or callback functions (tasks), it automatically pushes it into the callstack then delete from queue.  
 
 Here Microtask Queue has more priority than the Callback Queue.
 
@@ -971,7 +976,7 @@ Primitives are immutable.  Primitives are passed by value.
 ##### undefined
 `var declaration keyword`
 * If a variable is already declared, but value is not assigned to that variable, then it takes `undefined` as its value.
-* variable is defined but It is using before Initialization.  
+* variable (var) is defined but It is using before Initialization.  
 * The datatype of `undefined` is `undefined` itself.
 * `undefined` is special keyword using for placeholder.
 * Variable is already initialized but javascript in the memory phase assigned a default value __undefined__ at __Hoisting__.
@@ -1146,6 +1151,7 @@ console.log(squaresList);  // [ 1, 4, 9, 16 ]
 * The `every()` method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
   -  `let finalBool = myArray.every((currentValue, index, arr) => callback);`
   - Here index and arr are optional arguments
+
 ```js 
 let myArray = [1, 2, 3, 4, 5];
 const isAllPositive = myArray.every((eachItem) => eachItem > 0);
@@ -1199,6 +1205,7 @@ console.log(flatArray);  // [ 1, 2, 3, 4, 5 ]
 <summary>Object</summary>
 
 ### Object
+Object is used to store the properties. We can store properties as __ key : Value__ pairs.
 
 ##### Object Destructuring
 we can make object key to a variable.  
@@ -1221,6 +1228,90 @@ console.log(age); // Output: 28
 
 ---
 
+<details>
+<summary>Set</summary>
+
+### Set
+Set is used to store the unique Items.
+
+```js 
+let arr = [1,2,2,3,3,3];
+let uniqueItems = [...new Set(arr)];
+console.log(uniqueItems); // [1,2,3]
+```
+
+</details>
+
+---
+
+<details>
+<summary>Map</summary>
+
+# Map 
+We can't iterate on Object, but with the Map we can iterate on Object.
+
+```js 
+let obj = {
+    name:"praveen",
+    age:27,
+    place:"Hyderabad"
+};
+
+
+let mappedObj = new Map(Object.entries(obj));
+
+console.log(mappedObj);
+
+mappedObj.forEach((value, key) => {
+    console.log(`${key} = ${value}`);
+});
+```
+
+</details>
+
+---
+
+<details>
+<summary>Built-in Methods</summary>
+
+### Built-in Methods
+
+##### Math
+```js 
+console.log(Math.max(1, 3, 2));
+// Expected output: 3
+
+console.log(Math.max(-1, -3, -2));
+// Expected output: -1
+
+const array1 = [1, 3, 2];
+
+console.log(Math.max(...array1));
+// Expected output: 3
+```
+
+```js 
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
+
+const array1 = [2, 3, 1];
+
+console.log(Math.min(...array1));
+// Expected output: 1
+
+```
+
+##### Date 
+
+```js 
+const d = new Date();
+```
+</details>
+
+---
 <details>
 <summary>DOM</summary>
 
@@ -1264,7 +1355,6 @@ let childElement = document.querySelector('div .parent #child');
      - htmlFor, src, checked
      - `element.setAttribute(attribute, value);`
    * classList
-   
 
 ##### DOM manipulation
 DOM manipulation is interacting with the DOM to modify the HTML document that is to be rendered on the web browser.  
@@ -1383,7 +1473,6 @@ client-side Data storage is storing the data on the client (user's machine Brows
 `localStorage.removeItem("Key");`  
 `localStorage.clear();`
 
-
 ##### Cookies
 - `js-cookie` is the third-party package
 - We can set an expiration for Cookies
@@ -1425,6 +1514,7 @@ class SuperClass {
   }
   method1() {}
 }
+
 class SubClass extends SuperClass {
   constructor(property1, property2) {
     super(property1);
@@ -1446,7 +1536,7 @@ The `static` Keyword defines a static method or property for a class.
 
 __Static methods__ or __Static properties__ cannot be called on instances of the class. They are called on the class itself.
 
-```Javascript 
+```js 
 class Rectangle {
   constructor(height, width) {
     this.height = height;
@@ -1504,7 +1594,7 @@ let profile = {
 };
 ```
 
-```JSON
+```json
 {
   "name": "Rahul",
   "age": 29,
@@ -1531,7 +1621,7 @@ A Promise will be in any one of the three states
 
 ### Async and Await
 The `async/await` simply gives you a synchronous feel to asynchronous code.   
-The `await` keyword in JavaScript is used within an async function to pause the execution of that function until a promise is resolved. 
+The `await` keyword in JavaScript is used within an async function to pause the execution of that function until a promise is resolved or rejected. 
 
 ```js 
 
@@ -1773,7 +1863,6 @@ bindedFn()
 ### Currying  
 Currying in JavaScript transforms a function with multiple arguments into a chain of single-argument functions.
 
-
 ```js 
 
 function fn(a,b,c){
@@ -1808,12 +1897,31 @@ const multiplyByTen = multiplication.bind(this,10);
 multiplyByTen(5)  // 50
 ```
 
-### Polyfill
+### Polyfill (prototype)
 fill the many gaps.
 The developers of JavaScript always keep adding new features to the JavaScript language to improve performance and add better functionalities. Sometimes, it happens that new features don’t support by the old browser versions.  
 For example, the exponential operator is introduced in ES7, and the trailing comma in the object is also valid in ES7. Now, while developing the application, we have added used the exponential operator in the application. It will work with the newer versions of the browser, but if someone is using a very old version of the browser, they can get errors like the exponential operator is not supported by the browser engine.
 A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.
 
+Example : In Python language we have count method for List datastructure. But In Javascript we don't have count method for Array datastructure.
+
+Example : We can check list of Array methods with `Array.prototype` in console.
+
+```js 
+let myArray = [1,2,2,3,3,3,4,4,4,4];
+console.log(myArray);
+
+
+Array.prototype.count = function(value){
+    let result = 0;
+    this.forEach((item) => value === item && result++)
+    return result
+}
+
+
+const result = myArray.count(4)
+console.log(result)  // 4
+```
 
 ```js 
 function findEvenNumbers () {
@@ -1829,17 +1937,6 @@ Array.prototype.findEvenNumbers = findEvenNumbers
 myArray.findEvenNumbers();  // [2, 4]
 [3,2,5,6,1,3,4,8].findEvenNumbers() // [2, 6, 4, 8]
 
-```
-
-```js 
-const arr = [1,2,3,4]
-
-Array.prototype.findEven = function(){
-    let output = this.filter((x) => x%2 === 0)
-    console.log(output)
-}
-
-arr.findEven()
 ```
 
 ### Debouncing

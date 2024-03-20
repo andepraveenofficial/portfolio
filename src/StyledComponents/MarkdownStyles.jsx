@@ -32,6 +32,41 @@ const MarkdownStyles = styled.div`
           width:100% !important; 
        max-width:720px !important;
     }
+
+
+
+  
+  table{
+  border-collapse: collapse;
+  width: 100%; 
+  margin: 0 auto; 
+  }
+
+
+thead{
+background-color: #f0f0f0; 
+}
+
+
+
+tr{
+border-bottom: 1px solid #ddd; 
+  &:nth-child(even) {
+    background-color: #f5f5f5;
+}
+  
+
+th{
+  padding: 10px;
+  text-align: left; 
+  font-weight: bold;
+}
+
+
+td{
+ padding: 10px;
+}
+ 
 `;
 
 export default MarkdownStyles;

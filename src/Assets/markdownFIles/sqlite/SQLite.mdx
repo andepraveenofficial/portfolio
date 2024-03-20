@@ -74,14 +74,12 @@ Example:
 <details>
 <summary>Introduction to SQL</summary>
 
-
 ### Introduction to SQL
 
 __SQL__ stands for __Structured Query Language__  
 * SQL is used to perform operations on Relational DBMS.
 * SQL is easy to learn
 * SQL provides multiple commands to perform various operations like `create`, `retrive`, `update` and `delete` the data.
-
 
 </details>
 
@@ -130,7 +128,6 @@ CREATE TABLE player(
 | TIME | Represents a time of day (hours, minutes, seconds, and fractions of a second). |
 | DATETIME | Represents a combination of date and time. |
 | BOOLEAN | Represents true or false values. |
-
 
 ##### Table Information
 
@@ -245,14 +242,14 @@ ALTER TABLE
 ### Operators
 
 ##### Comparison Operators
-* __=__  Equal to
+* `__=__`  Equal to
 * `__<>__`  Not Equal to
-* `__<__`  Less than  
-* __>__  Greater than
+* `__<__`  Less than
+* `__>__`  Greater than
 * `__<=__`  Less than or Equal to
-* __>=__  Greater than or Equal to
+* `__>=__`  Greater than or Equal to
   
-```SQL 
+```sql 
   SELECT * 
   FROM player
   WHERE age <> 20;
@@ -261,10 +258,9 @@ ALTER TABLE
 ##### String Operations
 `LIKE` Operator is used to perform queries on strings. This operator is especially used in `WHERE` clause to retrieve all the rows that match the given pattern.
 
-
 | Symbol            | Description                        | Example                     |
 | ----------------- | ---------------------------------- | ----------------------------|
-| Percent sign (%)  | Represents zero or more characters | ch%finds ch, chips, chocolate..|
+| Percent sign (%)  | Represents zero or more characters | ch%finds ch, chips, chocolate.. |
 | Underscore (_)    | Represents a single character      | _atfinds mat, hat, and bat   |
 
 
@@ -286,7 +282,7 @@ WHERE
   category LIKE "Gadgets";
 ```
 
-Get all the products which have exactly 5 characters inbrand from the product table.
+Get all the products which have exactly 5 characters in brand from the product table.
 ```SQL 
 SELECT
   *
@@ -428,7 +424,7 @@ we get limited data only.
 * OFFSET
 
 ##### LIMIT
-LIMITclause is used to specify thenumber of rows(n)we would like to have in result.
+LIMIT clause is used to specify the number of rows(n) we would like to have in result.
 
 ```SQL 
 SELECT
@@ -445,7 +441,7 @@ LIMIT 2;
 ```
 
 ##### OFFSET
-OFFSETclause is used to specify the position (from nth row) from where the chunk of the results are to be selected.
+OFFSET clause is used to specify the position (from nth row) from where the chunk of the results are to be selected.
 
 ```SQL 
 SELECT
@@ -541,7 +537,6 @@ FROM
 GROUP BY name;
 ```
 ![GROUP BY](./Assets/group_by.gif)
-
 
 ```SQL 
 SELECT
@@ -817,18 +812,15 @@ ORDER BY 1 DESC;
 
 ##### Operators
 
-```table
 | Operator  | How to Use It                    | Functionality                                                                                      |
 | --------- | -------------------------------- | -------------------------------------------------------------------------------------------------- |
-| <>        | WHERE col <> 5                  | Filters rows where the given column is not equal to 5 ( Other comparison operators: `=, >, <, >=, <=` ) |
+| `<>`        | WHERE col `<>` 5                  | Filters rows where the given column is not equal to 5 (Other comparison operators: `=, >, <, >=, <=`) |
 | LIKE      | WHERE col LIKE '%Apple%'        | Retrieves rows where the column contains 'apple' within the text                               |
 | AND       | WHERE col1 > 5 AND col2 < 3     | Retrieves rows that satisfy all the given conditions                                              |
 | OR        | WHERE col1 > 5 OR col2 < 3      | Retrieves rows that satisfy at least one of the given conditions                                   |
 | NOT       | WHERE NOT col = 'apple'         | Retrieves rows if the condition(s) are NOT TRUE                                                    |
 | IN        | WHERE col IN ('Apple', 'Microsoft') | Retrieves rows if the column value matches any of the given values                       |
 | BETWEEN   | WHERE col BETWEEN 3 AND 5      | Retrieves rows where the column value falls within the specified range (inclusive)              |
-
-```
 
 ##### Functions
 

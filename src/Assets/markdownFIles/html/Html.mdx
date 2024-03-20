@@ -1,5 +1,7 @@
 # HTML
 
+---
+
 <details>
 <summary>Index</summary>
 
@@ -45,14 +47,14 @@
    ```html
     <h1>Heading</h1>
     <p>Paragraph</p>
-   ``` 
+   ```
 
 * `Empty Tag`
- ```html
-   <img src="image.jpg"/>
-   <br/>
-   <hr/>
-   ``` 
+  ```html
+    <img src="image.jpg"/>
+    <br/>
+    <hr/>
+    ``` 
 
 * Attributes are used to give extra information to the html element.
 * **HTML** elements tell the browser that how to display the content.
@@ -79,7 +81,7 @@ An **HTML** document consists of three parts :
 * **Head Part**  
   Head tag is for **Browser reading** purpose.  
   Here, we can mention `HTML` page configuration information.  
-  Here, we can store style sheets, scripts, title...etc.
+  Here, we can store title, style sheets, scripts...etc.
 
 * **Body Part**  
   Body tag is for **Client reading** purpose.  
@@ -97,6 +99,7 @@ we can put **content** between **start tag** and **end tag**.
 ##### Attribute syntax
 * Attributes are used to give extra information to the html element.
 * we must mention attributes only in __start__ tag.
+
 ```html 
 <tag attributeName="attributeValue">Content</tag>
 ```
@@ -115,7 +118,7 @@ we can put **content** between **start tag** and **end tag**.
 * By Combining HTML with JavaScript, we can create dynamic web pages.
 
 ##### HTML version
-HTML5 is the latest version of HTML.
+`HTML5` is the latest version of HTML.
 HTML5 is easier than HTML4 or Older versions.  
 
 In HTML5 version, they added new features,
@@ -166,14 +169,12 @@ In general, HTML elements can be divided into two categories.
 * containers
    * `header, nav, aside, main, section, article, div, footer`
 
-
 ##### **In-Line Elements**
 * Inline element occupies content width only.
 * The HTML Inline elements do not start in a new line.
  
 ```html
 <p>I am <a href="http://www.google.com">Google</a> link</p>
-
 <p>I am <span class="my-style">Ande Praveen</span></p>
 ```
 
@@ -340,10 +341,11 @@ Examples: `div` and `span`.
 ```
 
 ##### details
-It has two states:
+We can create accordion by using `<details/>`
 
-* open: We can see the additional information.
-* close: We can't see the additional information. We can see only the summary.
+It has two states:
+  * open: We can see the additional information.
+  * close: We can't see the additional information. We can see only the summary.
  
 ```html
 <details>
@@ -361,8 +363,7 @@ It has two states:
 
 ### Hyperlinks
 __Hyperlink__ is used to navigate to other web resources or a specific element within the HTML document.
-We can create hyperlinks to __text__ as well as __images__, __buttons__, ...etc.  
-
+We can create hyperlinks to __text__ as well as __images__, __buttons__, ...etc.
 
 we can create Hyperlink with HTML __anchor__ element.
 ```html
@@ -521,6 +522,7 @@ There are mainly two types of lists in HTML
 <summary>Table</summary>
 
 ### Table
+Table is a combination of rows and columns.
 
 ```
 thead => tr , th
@@ -624,13 +626,12 @@ __Checkbox__
     <label for="myCheckbox">Checkbox</label>
 ```
 
-
 __Radio Buttons__
 * It is used when only one option to be selected out of several available options.  
 * It is created by using an HTML input element with the `type` attribute value is set to `radio`.
 ```html 
-<input type="radio" id="genderMale" value="Male" name="gender"> Male
-<input type="radio" id="genderFemale" value="Female" name="gender"> Female
+<input type="radio" id="genderMale" value="Male" name="gender">  <label for="genderMale">Male</label>
+<input type="radio" id="genderFemale" value="Female" name="gender"> <label for="genderFemale">Female</label>
 ```
 
 __Dropdown__  
@@ -667,9 +668,9 @@ The HTML `option` element should be inside the HTML `select` element for definin
 
 __Textarea__
 ```html 
-<textarea rows="8" cols="55"></textarea>
-```
+<textarea rows="8" cols="55"></textarea><!--cols means number of characters-->
 
+```
 
 </details>
 
@@ -682,7 +683,7 @@ __Textarea__
 The HTML `<canvas>` element is used to draw graphics on a web page.  
 The `<canvas>` element is only a container for graphics. You must use JavaScript to actually draw the graphics.
 
-```html 
+```html index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -699,7 +700,7 @@ The `<canvas>` element is only a container for graphics. You must use JavaScript
 </html>
 ```
 
-```css 
+```css index.css
 .heading{
     text-align: center;
 }
@@ -711,7 +712,7 @@ The `<canvas>` element is only a container for graphics. You must use JavaScript
 }
 ```
 
-```javascript
+```js index.js
 let canvas = document.getElementById('myCanvas');
 console.log(canvas);
 
@@ -734,7 +735,7 @@ ctx.fillRect(0, 0, 150, 75);
 The HTML element defines the root of an HTML document.  
 It is a container for all the other HTML elements.
 
-```html
+```html index.html
 <!DOCTYPE html>
 <html>
   <head>Meta Data</head>
@@ -764,7 +765,7 @@ It is a container for all the other HTML elements.
 The HTML __style__ element to write the __css__ code in the HTML file. 
 The HTML __style__ element contains style information for an HTML document. 
 
-```html 
+```html index.html
 <!DOCTYPE html>
 <html>
   <head>
@@ -789,6 +790,31 @@ We use the HTML `link` element to link the CSS file to an HTML.
 
 ```html 
 <link rel="stylesheet" href="styles.css">
+```
+
+##### pre
+The text will be displayed exactly as written in the HTML source code.
+
+```html 
+
+<pre>
+  Twinkle, twinkle, little star,
+  How I wonder what you are! 
+  Up above the world so high,
+  Like a diamond in the sky.
+</pre>
+
+```
+
+##### code 
+The `<code>` tag is used to display a piece of code.
+
+```html 
+<pre>
+    <code>
+        <h1>I am Heading Tag</h1>
+    </code>
+</pre>
 ```
 
 </details>
@@ -890,7 +916,7 @@ If present, it specifies that an input field must be filled out before submittin
 
 ##### Can we use the HTML `p` element inside an HTML `span` element?  
 The HTML `span` element is an inline element, which should contain only other inline elements.
-span is an inline element and `p` is a block-level element, we can't use the `p` element inside a `span` element.
+`span` is an inline element and `p` is a block-level element, we can't use the `p` element inside a `span` element.
  
 </details>
 

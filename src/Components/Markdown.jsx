@@ -1,5 +1,6 @@
 /* -----> Third Party packages <----- */
 import { useSelector } from "react-redux"
+import remarkGfm from 'remark-gfm';
 
 /* -----> Markdown Files <----- */
 import HTML from "./../Assets/markdownFIles/html/Html.mdx"
@@ -38,8 +39,7 @@ const Markdown = () => {
     return (
 
         <div className="w-screen bg-[#333] max-w-screen-2xl" >
-            <MarkdownStyles >{renderMarkDown()}</MarkdownStyles>
-
+            <MarkdownStyles remarkPlugins={[remarkGfm]}>{renderMarkDown()}</MarkdownStyles>
         </div>
     )
 }

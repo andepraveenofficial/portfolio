@@ -1,5 +1,7 @@
 # ReactJS
 
+---
+
 <details>
 <summary>Index</summary>
 
@@ -249,6 +251,8 @@ const Heading = React.createElement(
 ```
 
 ```js 
+
+
 // With JSX
 const Heading = <h1 className="greeting">Hello World!</h1>
 ```
@@ -271,7 +275,7 @@ const templateLiteral = <h1>{`My age is ${number}`}</h1>
 
 ```
 
-##### React Fragment
+##### React Fragment 
 * __Fragment__ is used to return multiple elements from a React component.
 *  __Fragment__ is used to group a list of children without adding extra node to the DOM.  
 * The __Fragment__ is an alternate way to return a single JSX element. 
@@ -461,12 +465,12 @@ node_modules
 * It also allows you to switch to previous versions of the dependencies without actually saving changes to the node_modules folder.
 * The `package-lock.json` file contains important information about the dependencies and their specific versions used in your project. If you modify or delete this file, it can cause problems with the dependencies when deploying your project in the production environment. It's best not to modify the package-lock.json file because __npm__ automatically handles it for you to ensure the correct dependencies are installed.
 
-### Q: What is the `dist` folder?
+##### Q: What is the `dist` folder?
 we run command `npx parcel index.html` this will create a faster development version of our project & serves it on the server.  
 The /dist folder contains the minified version of your source code that is used in production for web applications.  It includes all the necessary files and modules that have been optimized and made as small as possible. This folder holds the final code that is ready to be deployed and used by users.  
 `npx parcel build index.html` it creates a lot of things, minify your file. and "parcel will build all the production files to the dist folder".
 
-## Q: What is `browserslist`?
+##### Q: What is `browserslist`?
 A: `Browserslist` is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
 
 ##### parcel 
@@ -510,12 +514,12 @@ root.render(parent);
 <details>
 <summary>Ready Made ReactApp Setup</summary>
 
-# Ready Made ReactApp Setup
+### Ready Made ReactApp Setup
 Creating a real-world application involves a lot of setup because a large number of components need to be organised.
 1. create-react-app
 2. create-vite
 
-### Create React Application
+##### Create React Application
 1. Install `Node.js` from the official website.
 2. Install Create React App globally
     * `npm install -g create-react-app`
@@ -1059,9 +1063,9 @@ const {greeting, name} = props;
 
 // Retur JSX 
 return (
-<div>
- {greeting} {name}
-</div>
+    <div>
+        {greeting} {name}
+    </div>
 );
 };
 
@@ -1256,7 +1260,7 @@ this.state = {key:"value"}
 
 ##### render()
 The `render()` method is used to return the JSX that is displayed in the UI.
-If more than one JSX element is to be rendered, then they must be grouped using a container element or use react fragment.
+If more than one JSX element is to be rendered, then they must be grouped using a container element or use React fragment.
 The `render()` is called whenever there is a change in the component's state.
 
 ##### componentDidMount()
@@ -1315,7 +1319,7 @@ React Hook -> Normal JS FUnction with superpowers
 
 ##### useState()
 * `useState` hook is used to maintain the local state in Functional Component.
-* The  `useState` hook is a special function that takes the `initialState` as an argument and `returns an array` of two entries.
+* The `useState` hook is a special function that takes the `initialState` as an argument and `returns an array` of two entries.
 
  ```js
 	const counterArray = useState(0);
@@ -1362,7 +1366,7 @@ const [state, dispatch] = useReducer(reducer, initialValue);
 }
 ```
 * when called dispatch functions, It triggers the reducer function and reducer takes 2 arguments currentState and dispatchAction. 
-* what we are returning from reducer functions that is stored in state.
+* what we are returning from reducer function that is stored in state.
 * Best way to write reducer functions in separate file in Helpers Folder.
 
 ```js 
@@ -1571,12 +1575,12 @@ const App = () => {
 
 	// Methods
 	const sum = (num1, num2) => {
-		console.log('sum Method');
+		console.log('sum Method'); // Look Here
 		return num1 + num2;
 	};
 
 	let result = useMemo(() => {
-		console.log('useMemo Call');
+		console.log('useMemo Call'); // Look Here
 		const add1 = sum(a, b);
 		return add1;
 	}, [a, b]);
@@ -1615,32 +1619,29 @@ const cachedFn = useCallback(fn, [dependencies])
 ```
 
 ```js 
-import React, { useState, useCallback } from 'react';
+import { useCallback, useState } from 'react'
 
-const App = () => {
-  const [count, setCount] = useState(0);
+let fnCount = new Set();
 
-  // Without useCallback
-  const increment = () => {
-    setCount(count + 1);
-  };
+const CallbackHook = () => {
 
-  // With useCallback
-  const decrement = useCallback(() => {
-    setCount(count - 1);
-  }, [count]);
+    const [isDone, setIsDone] = useState(true)
 
+    const fn = useCallback(() => {
+        console.log("Hello World")
+    }, [])
 
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-    </div>
-  );
+    fnCount.add(fn)
+
+    console.log(fnCount)
+
+    return (
+        <div>
+            <button onClick={() => setIsDone(!isDone)}>click</button></div>
+    )
 }
 
-export default App;
+export default CallbackHook
 
 ```
 
@@ -1648,15 +1649,14 @@ export default App;
 * It  memoize the Component. The Component is re-recreated when props or state of the Components Updated.
 
 ##### Own Hook
-* we create own hooks for Single Responsibility priciple.
-* we can create own hooks.  
+* we can create own hooks for Single Responsibility priciple. 
 * Hooks are utility functions.
 * Hooks are basically normal JS functions.
 * we should mention `use` word before custom hook for identify a custom hook.
 * use is not a mandatory, it is recommended. most of the developers uses the **use** word.
 * custom hooks are More Readable and Reusable.
 
-```js 
+```js  useGetAPIData.js
 // Hooks
 // Custom Hooks
 
@@ -1664,24 +1664,25 @@ import { useEffect, useState } from 'react';
 
 export const useGetAPIData = (apiUrl) => {
 	console.log('useGetAPIData Custom Hook');
+	
 	// Local State
 	const [data, setData] = useState([]);
-
-	// Mounting
-	useEffect(() => {
-		getData();
-	}, []);
-
-	// Methods
-	const getData = async () => {
+	
+	/ Methods
+	const getData = async (url) => {
 		const options = {
 			method: 'GET',
 		};
-
-		const response = await fetch(apiUrl, options);
+		
+		const response = await fetch(url, options);
 		const data = await response.json();
 		setData(data);
 	};
+
+	// Mounting
+	useEffect(() => {
+		getData(apiUrl);
+	}, []);
 
 	// Return Data
 	return data;
@@ -1689,7 +1690,7 @@ export const useGetAPIData = (apiUrl) => {
 
 ```
 
-```js 
+```js App.js
 import React from 'react';
 import { useGetAPIData } from './utilities'; // Custom Hooks
 
@@ -1736,17 +1737,16 @@ __MPA__ stands for __Multi-page application__
 * The browser downloads these resources when you access them or navigate between URLs.
 
 
-## Q: What is the difference between `Client Side Routing` and `Server Side Routing`?
+##### Q: What is the difference between `Client Side Routing` and `Server Side Routing`?
 A: In `Server-side routing or rendering (SSR)`, every change in URL, http request is made to server to fetch the webpage, and replace the current webpage with the older one.  
 In `Client-side routing or rendering (CSR)`, during the first load, the webapp is loaded from server to client, after which whenever there is a change in URL, the router library navigates the user to the new page without sending any request to backend. All `Single Page Applications uses client-side routing`. 
 
-
 ### To implement __routing__, React Router provides various components.
    - BrowserRouter
-   - Router
+   - Routes
    - Route
    - Link
-   - navigate
+   - Navigate
    - withRouter
 
 #####  BrowserRouter
@@ -1755,9 +1755,9 @@ To add routing, wrapping all the components with `BrowserRouter`.
 ##### Route
 The `Route` Component renders specific UI component when path matches current URL. 
 
-##### **Link**
-Don't use <a></a> tag,  because the whole page get reload with anchor tag.
-so use `<Link><Link/>`component of `react-router-dom`  
+##### Link
+Don't use `<a></a>` tag,  because the whole page get reload with anchor tag.
+so use `<Link>` component of `react-router-dom`  
 you can navigate to other page without reload the full page.
 The `to` prop specifies absolute path.
 
@@ -1782,10 +1782,14 @@ const Header = () => {
 export default Header;
 ```
 
-##### navigate
+##### Navigate
 navigate Component is used to redirect to another path.
 
-##### withRouter 
+```js 
+  <Navigate to="/home" replace={true} />
+```
+
+##### withRouter (older version)
 To provide __Routing default properties__ prop to other components, we can wrap it with the withRouter function while exporting it.
 `export default withRouter(Header)`
 
@@ -1913,7 +1917,7 @@ export default Card;
 
 ```js  
 /* -----> Third Party Packages <----- */
-import { Route, navigate } from "react-router-dom";  // routing Components
+import { Route, Navigate } from "react-router-dom";  // routing Components
 import Cookies from 'js-cookie'  // Cookies is used to store data on client-side with expiry duration.
 
 // ProtectedRoute is the Wrapper Component
@@ -1922,7 +1926,7 @@ const ProtectedRoute = (props) => {
     console.log(props)
     const token = Cookies.get("jwt_token");
     if (token === undefined) {
-        return <navigate to="/login" />;
+        return <Navigate to="/login" replace={true} />;
     }
     return <Route {...props} />;
 };
@@ -1962,7 +1966,7 @@ function HomeButton() {
 ```
 
 ##### useParams
-useParams returns an object of key/value pairs of URL parameters. Use it to access match.params of the current `<Route>`.
+useParams returns an object of key/value pairs of URL parameters. Use it to access match params of the current `<Route>`.
 
 ```js 
 import * as React from 'react';
@@ -2146,12 +2150,11 @@ Redux is not only the library for managing the state.
 1. React-Redux
 2. Redux-Toolkit
 
-
 ### Redux-Toolkit (RTK) Setup
 * Install `@reduxjs/redux-toolkit` and `react-redux `
 * Build our store
 * connect store to our App
-* create Slice
+* create Slice -> add slices to store
 * dispatch (action)
 * selector => Access Store
 * Check in redux dev tools
@@ -2224,7 +2227,7 @@ const isLogin = useSelector((store) => store.my.isLogin)
 ```
 
 ##### dispatching 
-`useDispatch` hook is used  dispatch the action. store. 
+`useDispatch` hook is used dispatch the action to store. 
 
 ```js
 import {useDispatch} from "react-redux";
@@ -2271,7 +2274,7 @@ storing data on client-side with expiry duration.
 # Styles
 we can style the React Component by using:
 1. Inline
-2. custom css
+2. custom css file
 3. Tailwind
 4. styled Components
 
@@ -2364,14 +2367,12 @@ It is similar to the `fetch` method.
 2. Success View
 3. Failure View
 
-
-# Q: What is `CORS`?
+##### Q: What is `CORS`?
 __CORS__ stands for __Cross-Origin Resource Sharing__.  
 CORS is used to calls from one domain to another domain.
 
 Example :
 `https://corsproxy.io/?{myapi}`
-
 
 ### Optional Chaining
 `Optional Chaining` (`?.`) operator accesses an object's property or calls a function. If the object accessed or function called is `undefined or null` , it returns `undefined` instead of throwing an error.
@@ -2399,11 +2400,11 @@ const data = apiData || hardData
 Bundler takes all your files and bundle into one file.  
 All the `js` files bundle into 1 file is good. but some cases 1000 files bundle into 1 file is not good. also don't call 1000 files in browser. browser do a lot of work to call 1000 files.
 * we do logically break your entire application into smaller applications.
-* So We make small bundles to fast our fast.
+* So We make small bundles to fast our App.
 * When we need then only load that component.
 
 Lazy Loading has many names : 
-1. Chunking 
+1. Chunking
 2. Code Splitting
 3. Dynamic Bundling
 4. Lazy Loading
@@ -2505,12 +2506,12 @@ ReactDOM.render(
 * React compares new virtual DOM with current virtual DOM, and the difference will be updated to the Real DOM.
 * It finds out the changed nodes and updates only the changed nodes in Real DOM leaving the rest nodes as it is. This process is called Reconciliation.
 
-## Q: What is `React Fiber`?
+##### Q: What is `React Fiber`?
 In React 16, Diff algorithm changed a little and React introduced React Fiber.  
 React Fiber is a concept of ReactJS that is used to render a system faster, smoother and smarter.
 The Fiber reconciler, which became the default reconciler for React 16 and above, is a complete rewrite of React’s reconciliation algorithm to solve some long-standing issues in React.
 
-##### Why react is faster than JS?
+##### Why React is faster than JS?
 Actually __react__ is a JavaScript library, SO React is as fast as javascript.
 
 </details>
@@ -2793,7 +2794,7 @@ use Optional Chaining
 const name = resData?.info?.name; // Optional Chaining
 ```
 
-### debugger 
+### **debugger** keyword 
 It is used to debug the code.
 
 ### Good Code :
@@ -2836,7 +2837,8 @@ It is used to debug the code.
         - randomEmoji
         - randomColor   
     * Utils
-        - constants        
+        - constants
+        - hardData
 
 </details>
 

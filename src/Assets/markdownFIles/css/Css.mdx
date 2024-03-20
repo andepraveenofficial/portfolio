@@ -1,5 +1,7 @@
 # CSS
 
+---
+
 <details>
 <summary>Index</summary>
 
@@ -29,7 +31,7 @@
 __CSS__ stands for __Cascading Style Sheets__  
 * CSS used in web development to apply styles to the html document.
 * We can create Responsive webpages by combining HTML & CSS.
-* Once we create a style sheet with .css file, we can use it for multiple .html files.
+* Once we create a style sheet with `.css` file, we can use it for multiple `.html` files.
 
 ##### Syntax
 ```css
@@ -54,9 +56,9 @@ we can use `style` attribute to apply css styles to a particular element.
 
 ##### **Internal**  
 we can use `style` element to write `css code` for a particular HTML document.  
-we use `style` element in head part.
+Generally, we use `style` element in head part.
 
-```html 
+```html index.html
 <!DOCTYPE html>
 <html>
   <head>
@@ -77,11 +79,11 @@ we use `style` element in head part.
 we can create External CSS Style Sheet with `.css` file extension.    
 by using the HTML `link` element to link the External CSS file.  
 
-```html 
+```html index.html
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <h1 class="heading">content</h1>
@@ -89,7 +91,7 @@ by using the HTML `link` element to link the External CSS file.
 </html>
 ```
 
-```css 
+```css index.css
 .heading{
     color:green;
     background-color:orange;
@@ -106,6 +108,7 @@ by using the HTML `link` element to link the External CSS file.
 
 ##### Inheritance
 Children Inherits the Parent Property is called Inheritance.
+
 ```css 
 .parent{
     color:blue;  /*  Inherited Property */
@@ -124,10 +127,22 @@ Browser gives priority to select the CSS property.
 5. Tag
 6. Universal
 
-
 ##### Cascade
 The source order of CSS Ruleset matters.  
 when two CSS Ruleset have equal specificity, the one that comes last in the CSS is applied.
+
+```css 
+        .container {
+            background-color: greenyellow;
+            box-shadow: 0 0 10px black;
+        }
+        
+        .container { 
+            / *These are applicable */ 
+            background-color: red;
+            box-shadow: 0 0 10px black;
+        }
+```
 
 </details>
 
@@ -144,7 +159,7 @@ The CSS Selectors are used to select the HTML elements that we want to apply sty
 3. Id selector = only one particular element selection
 4. Attribute selector
 5. Pseudo selector
-6. Mixed selector 
+6. Mixed / Child selector 
 7. Group selection
 8. Universal Selector 
 
@@ -175,6 +190,7 @@ p{
 ```
 
 ##### Id Selector
+
 ```html 
  <p id="myParagraph">I am ID Selector</p>
  <p>I am Tag Selector</p>
@@ -224,7 +240,9 @@ input[type="password"]{
 ```
 
 ##### Pseudo selector
-Pseudo selector is a dynamic selector  
+Pseudo selector is a dynamic selector.  
+Apply css dynamically.
+  
 `selector:event`
 
 ```html 
@@ -427,8 +445,8 @@ background:color image repeat attachment position;
 
 ### Box Properties
 1. width & height
-2. border
-3. padding
+2. padding
+3. border
 4. margin
 5. outline
 
@@ -439,7 +457,7 @@ background:color image repeat attachment position;
 * __Padding__ - The space between the content and the border.
 * __Border__ - A borderline that goes around the padding and content. 
 * __Margin__ - The space outside the border.
-* __Outline__ - An outline that goes around the margin.
+* __Outline__ - An outline that goes around the border.
 
 ##### Intrinsic vs Extrinsic
 * some elements have a natural size set by default, we call it Intrinsic size.
@@ -488,7 +506,7 @@ The space between border and outline
  * `margin-left: 50px;`
 
 ##### outline
-An outline that goes around the margin.
+An outline that goes around the border.
 * `outline-style: dashed;`
 * `outline-width: 5px;`
 * `outline-color: orange;`
@@ -528,6 +546,7 @@ Box-Sizing property has the following values:
 }
 ```
 * __border-box__:
+Fixed width and height. It is adjustment to given width and height.
 
 ```css 
 .container {
@@ -572,6 +591,14 @@ __overflow__ : child element is not overflowed on parent element.
 4. auto => It is similar to scroll, but it adds scrollbars only when necessary.
   *  `overflow: auto;`
 
+```css 
+.parent {
+    height: 100px;
+    width: 200px;
+    border: 10px solid green;
+    overflow: scroll;
+}
+```
 </details>
 
 ---
@@ -646,7 +673,7 @@ If the value of align-self is auto, then the align-items value of its Flex conta
     - +ve values
     - -ve values
 
-```html 
+```html index.html
 <!DOCTYPE html>
 <html>
 <head>
@@ -689,7 +716,7 @@ If the value of align-self is auto, then the align-items value of its Flex conta
 
 ##### Grid
 This is used to create the Layout.
-
+We can create columns.  
 ```css 
 .grid-container {
    display: grid;

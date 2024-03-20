@@ -1,4 +1,4 @@
-#### Python
+# Python
 
 <details>
 <summary>Index</summary>
@@ -22,8 +22,10 @@
 * Looping Statements
 * Built-in Functions
 * OOPs
+* Generators
 * General
 * Standard Library
+
 </details>
 
 ---
@@ -56,7 +58,7 @@ print("Hello World")
    - Large Standard Library
 
 ##### Case sensitive
-   - Python is case-sensitive language. 
+   - Python is a case-sensitive language. 
    - It means uppercase letters and lowercase letters are different in Python.
    - Example : The __username__, __UserName__, and __userName__ are three different variables.
 
@@ -66,8 +68,8 @@ A __Comment__ is not executed.
 Understanding the code easily after a long-term.
 
 
-```py 
-# Single Line Comment
+```py
+## Single Line Comment
 
 """
 Multiple Comment
@@ -99,7 +101,8 @@ print(user_input)   # Hello World
 ```
 
 ##### Dynamically Typed
-* __Python__ is a dynamically typed language, which means there is no need to declare the type of a variable when we create it. Python itself checks and identifies the type of a variable based on the assigned value.
+* __Python__ is a dynamically typed language, which means there is no need to declare the type of variable when we create it. 
+* Python itself checks and identifies the type of a variable based on the assigned value.
 
 * Other programming languages like `C`, `C++`, `Java`, `Typescript`...etc are statically typed languages which means we must declare the type of the variable. we cannot change the data type of a variable during the execution of the program.
 
@@ -119,7 +122,7 @@ print(type(x))  # <class 'str'>
 <summary>Variable</summary>
 
 ### Variable
-Variables are like containers. we can use these containers to store data during program execution. we can mention a name for identify a particular container. So those named Containers are called variables. we can manipulate the data in the containers by reffering that variable name.
+Variables are like containers. we can use these containers to store data during program execution. we can mention a name for identify a particular container. So those named Containers are called variables. we can manipulate the data in the containers by referring that variable name.
 
 we can store different types of data in the containers. In programming languages, we have some categories in data.
 
@@ -245,7 +248,7 @@ The scope of a variable is the region in which that variable can be accessed.
 2. Global Variable
 
 ##### Local Variable 
-If a variable is declared inside of a function then that type of variable is called Local Variable. 
+If a variable is declared inside a function then that type of variable is called Local Variable. 
 
 we can access these Local Variables only within that particular block of code.
 
@@ -271,7 +274,7 @@ If a variable is declared outside a function then that variable is called Global
 
 These Global Variables can be accessed at any part of the code including Functions also.
 
-If the value of the global variable is modified inside a functionthen that changes are reflected in the rest of the program.
+If the value of the global variable is modified inside a function then that changes are reflected in the rest of the program.
 
 ```py 
 
@@ -548,11 +551,11 @@ print(a)  # 6
 The standard order of evaluating an expression is __BODMAS__ rule.
 
 1. Brackets (B)
-1. Orders (O) -> Exponent
-1. Division (D)
-1. Multiplication (M)
-1. Addition (A)
-1. Subtraction (S)
+2. Orders (O) -> Exponent
+3. Division (D)
+4. Multiplication (M)
+5. Addition (A)
+6. Subtraction (S)
 
 `Expression: (5 * 2) + (3 * 4 + 4 / 2)`
 
@@ -1129,8 +1132,6 @@ print(my_list)  # [1, 2, 3, 2, 5]
 my_list.remove(2)
 print(my_list)  # [1, 3, 2, 5]
 
-
-
 print("-----clear()-------")
 # my_list.clear()
 # removes all the items from the list
@@ -1140,7 +1141,7 @@ print(my_list)  # [1, 2, 3, 4, 5]
 my_list.clear()
 print(my_list)  # []
 
-print("------index()---")
+print("------index()-----")
 # my_list.index(value)
 # returns the index of first matching element from the list
 my_list = [1, 2, 3, 3, 5]
@@ -1254,10 +1255,10 @@ print(week_days)  # ['Wednesday', 'Tuesday', 'Monday']
 remove is a method that is used to remove the first occurrence of a specified value from a list. If the specified value is not found, it raises a ValueError.
 
 ```py 
-list = [1, 2, 3, 2]
-list.remove(2)
+my_list = [1, 2, 3, 2]
+my_list.remove(2)
 
-print(list) # [1,3,2]
+print(my_list) # [1,3,2]
 ```
 
 
@@ -2010,7 +2011,7 @@ The Conditional Statement allows you to execute a block of code based on a condi
    - When `If-Else` conditional statement is used, the Else block of code executes if the `if` condition is `False`.
    ![if-else statement](./Assets/02_Conditional_Statements/if-else.jpg)  
 
-   ```py 
+```py 
       
     # Conditional Statements
     # if-else condition
@@ -2023,7 +2024,7 @@ The Conditional Statement allows you to execute a block of code based on a condi
 
    else:
       print("Yes, His age is above 30 years")  # Yes, His age is above 30 years
-   ```
+```
 
 * __if-elif-else__
    - Incase `if` condition is not satisfy then `elif` condition will be checked. 
@@ -2252,7 +2253,6 @@ string = "Ande Praveen"
 string_length = len(string)
 print(string_length)  # 12
 
-
 my_list = [1, 2, 3, 4, 5]
 my_list_length = len(my_list)
 print(my_list_length)  # 5
@@ -2365,7 +2365,7 @@ print("---------------")
 ```
 
 ##### sum()
-It return sum of items in a sequence.
+It returns sum of items in a sequence.
 
 ```py 
 
@@ -2472,8 +2472,7 @@ print(is_any_true)  # True
 ```
 
 ##### enumerate()
-The `enumerate()` function adds a counter to each item in a sequence and returns a sequence containing
-tuples.
+The `enumerate()` function adds a counter to each item in a sequence and returns a sequence containing tuples.
 `enumerate(sequence, start)`
 * sequence :It is any sequence like a string, list, tuple, etc.
 * start (Optional): it indicates the start point of the counter. Its default value is 0 .
@@ -2558,36 +2557,64 @@ The principles of OOPs involve,
 * Polymorphism
 
 ##### Inheritance
-A Child Class inherits attributes and methods from Parent Class is called Inheritance.
+A Child Class inherits attributes and methods from Parent Class is called __Inheritance__.
 
 ```py 
-# Parent class (Superclass)
-class Animal():
+class Human:  # Paren
     def __init__(self, name):
         self.name = name
 
+    def sayName(self):
+        print(self.name)
 
-# Child class (Subclass) inheriting from Animal
-class Dog(Animal):
+
+class Male(Human): # Child
     def __init__(self, name):
-         super().__init__(name)
-    def speak(self):
-        return f"{self.name} says Woof!"
+        super().__init__(name)
+        self.gender = "Male"
+    def sayAbout(self):
+        print(f"{self.name} is a {self.gender}"  )
 
-# Child class (Subclass) inheriting from Animal
-class Cat(Animal):
+class Female(Human): # Child
     def __init__(self, name):
-         super().__init__(name)
-    def speak(self):
-        return f"{self.name} says Meow!"
+        super().__init__(name)
+        self.gender = "Female"
 
-# Creating instances of the derived classes
-dog = Dog("Buddy")
-cat = Cat("Whiskers")
+    def sayAbout(self):
+        print(f"{self.name} is a {self.gender}"  )
 
-# Calling the speak method of each instance
-print(dog.speak())  # Output: Buddy says Woof!
-print(cat.speak())  # Output: Whiskers says Meow!
+
+
+male_instance = Male("Praveen")
+male_instance.sayAbout()
+
+female_instance = Male("Navya")
+female_instance.sayAbout()
+
+```
+
+##### Multilevel Inheritance
+
+```py 
+class Grand:
+    def __init__(self, first):
+        self.first = first
+
+
+class Parent(Grand):
+    def __init__(self, first, second):
+        super().__init__(first)
+        self.second = second
+
+
+class Child(Parent):
+    def __init__(self, first, second, third):
+        super().__init__(first, second)
+        self.third = third
+
+
+instance = Child(1,2,3)
+print(instance.first)
 
 ```
 
@@ -2600,6 +2627,7 @@ Classes can be used to bundle related attributes and methods.
 * Protected Member: Accessible within the class and its sub-classes
 * Private Member: Accessible within the class
 ![Encapsulation](./Assets/05_OPPs/encapsulation.jpg)
+
 
 ```py 
 class Employee:
@@ -2667,7 +2695,7 @@ print("Updated Department:", manager.department)
 ##### Abstraction 
 In python, Abstraction is defined as a process of handling complexity by hiding unnecessary information from the user.  
 
-__For example__ :  When we use the TV remote to increase the volume. We don't know how pressing a key increases the volume of the TV.
+__For example__ : When we use the TV remote to increase the volume. We don't know how pressing a key increases the volume of the TV.
 
 ##### Polymorphism
 Polymorphism contains two words __poly__ and __morphs__. Poly means many, and morph means shape. By polymorphism, we understand that one task can be performed in different ways.
@@ -2675,64 +2703,10 @@ The word polymorphism means having many forms.
 
 ![Polymorphism](./Assets/05_OPPs/polymorphism.jpg)
 
-```py 
-class Animal:
-    def make_sound(self):
-        pass
-
-class Dog(Animal):
-    def make_sound(self):
-        return "Woof!"
-
-class Cat(Animal):
-    def make_sound(self):
-        return "Meow!"
-
-def animal_sound(animal):
-    return animal.make_sound()
-
-dog = Dog()
-cat = Cat()
-
-print(animal_sound(dog))  # Calls Dog's make_sound method
-print(animal_sound(cat))  # Calls Cat's make_sound method
-
-
-```
-
-##### Classes
-A class is a prototype from which objects are created. Classes can be used to bundle related attributes and methods. An instance of a class is an Object.  
+##### Class
+A class is a prototype from which objects are created. 
+Classes can be used to bundle related attributes and methods. An instance of a class is an Object.  
 A class in Python is defined using the `class` keyword, followed by the class name and a colon. Inside the class, attributes and methods can be defined to represent properties and behaviors of the class.
-
-```py 
-class Mobile:
-    def __init__(self, model, storage):
-        self.model = model
-        self.storage = storage
-
-
-obj = Mobile("iPhone 15 Pro", "128GB")
-print(obj.model)  # iPhone 15 Pro
-```
-
-```py 
-class Dog:
-    species = "Canine"  # class attribute
-    
-    def __init__(self, name, age):
-        self.name = name  # instance attribute
-        self.age = age    # instance attribute
-    
-    def bark(self):
-        return f"{self.name} says Woof!"
-
-dog1 = Dog("Buddy", 3)
-dog2 = Dog("Lucy", 5)
-
-print(dog1.bark())  # Output: Buddy says Woof!
-print(dog2.bark())  # Output: Lucy says Woof!
-print(Dog.species)  # Output: Canine
-```
 
 ##### `__init__`
 It is also known as the constructor method, and it is used to initialize the attributes (or properties) of an object when an instance of a class is created. This method is automatically called when you create a new object from a class, and it allows you to set up the initial state of the object.
@@ -2795,27 +2769,26 @@ Method Overriding allows us to change the implementation of a function in the ch
 
 ```py 
 class Product:
-    def __init__(self, name, price, deal_price, rating):
+    def __init__(self, name, price, deal_price):
         self.name = name
         self.price = price
         self.deal_price = deal_price
-        self.rating = rating
         self.you_save = price - deal_price
 
     def display_product_details(self):
-        print("Product: {}".format(self.name))
-        print("Price: {}".format(self.price))
-        print("Deal Price: {}".format(self.deal_price))
-        print("You Saved: {}".format(self.you_save))
-        print("Rating: {}".format(self.rating))
+        print(f"Product: {self.name}")
+        print(f"Price: {self.price}")
+        print(f"Deal Price: {self.deal_price}")
+        print(f"You Saved: {self.you_save}")
 
     def get_deal_price(self):
         return self.deal_price
 
+
 class ElectronicItem(Product):
     def display_product_details(self):
         super().display_product_details()
-        print("Warranty {} months".format(self.warranty_in_months))
+        print(f"Warranty {self.warranty_in_months} months")
 
     def set_warranty(self, warranty_in_months):
         self.warranty_in_months = warranty_in_months
@@ -2823,7 +2796,8 @@ class ElectronicItem(Product):
     def get_warranty(self):
         return self.warranty_in_months
 
-e = ElectronicItem("Laptop",45000, 40000,3.5)
+
+e = ElectronicItem("Laptop",45000, 40000)
 e.set_warranty(10)
 e.display_product_details()
 ```
@@ -2833,8 +2807,7 @@ Product: Laptop
 Price: 45000
 Deal Price: 40000
 You Saved: 5000
-Rating: 3.5
-Warranty 10 mont
+Warranty 10 months
 ```
 In the above example, the display_product_details() method in the ElectronicItem class overrides the display_product_details() method of the Product class.
 
@@ -2849,6 +2822,27 @@ In Python, decorators are a flexible way to modify or extend the behavior of fun
 * Static Method -> `@staticmethod`
    - we might need some generic methods that don't need access to either instance or class attributes. These type of methods are called static methods. 
 
+</details>
+
+---
+
+<details>
+<summary>Generators</summary>
+
+### Generators
+Generators are a powerful concept in Python that allow you to create functions that act like iterators. This means they can produce a sequence of values on-demand, one at a time, without storing the entire sequence in memory at once. This is particularly useful when dealing with large datasets or infinite sequences.
+
+__Created using yield__: A generator function is defined like a normal function, but instead of using return to produce a single value, it uses the yield keyword to generate a sequence of values.
+
+```py
+def number_generator(n):
+    for i in range(n):
+        yield i
+
+
+for num in number_generator(5):
+    print(num)
+```
 </details>
 
 ---
@@ -2924,7 +2918,7 @@ except:
 ```
 
 ##### Pandas and Numpy?
-* `NumPy` is a powerful Python library for mathematical and logical operations. It provides an large useful features for multi-dimensional arrays, along with creating arrays of random numbers, variety of linear algebra functions with huge community and has been extensively documented. It is widely used in scientific computing, engineering, and data analysis.
+* `NumPy` is a powerful Python library for mathematical and logical operations. It provides a large useful features for multi-dimensional arrays, along with creating arrays of random numbers, variety of linear algebra functions with huge community and has been extensively documented. It is widely used in scientific computing, engineering, and data analysis.
 
 * `Pandas` is a powerful Python library for data manipulation and analysis. It allows us to import data from a variety of formats (like CSV, Excel, SQL, etc.) and convert data into many formats. Its features enables tasks such as cleaning, transforming, and analyzing data efficiently.
 

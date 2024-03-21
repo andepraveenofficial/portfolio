@@ -52,3 +52,8 @@ export const capturing = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v171
 export const bubbling = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017014/portfolio/markdown/javascript/core_javascript/bubbling.png"
 export const async_vs_defer = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711016626/portfolio/markdown/javascript/core_javascript/async_vs_defer.avif"
 export const recursively = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711016636/portfolio/markdown/javascript/core_javascript/recursively.png"
+
+// REACT 
+export const dataflow = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017660/portfolio/markdown/react/dataflow.webp"
+export const class_component_life_cycle = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017681/portfolio/markdown/react/Life_Cycle.png"
+export const authentication = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017654/portfolio/markdown/react/authentication.png"

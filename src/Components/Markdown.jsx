@@ -3,12 +3,12 @@ import { useSelector } from "react-redux"
 import remarkGfm from 'remark-gfm';
 
 /* -----> Markdown Files <----- */
-import HTML from "./../Assets/markdownFIles/html/Html.mdx"
-import CSS from "./../Assets/markdownFIles/css/Css.mdx"
-import JAVASCRIPT from "./../Assets/markdownFIles/javascript/Javascript.mdx"
-import REACT from "./../Assets/markdownFIles/react/react.mdx"
-import PYTHON from "./../Assets/markdownFIles/python/Python.mdx"
-import SQLITE from "./../Assets/markdownFIles/sqlite/SQLite.mdx"
+import HTML from "./../Assets/markdownFIles/HTML.mdx"
+import CSS from "./../Assets/markdownFIles/CSS.mdx"
+import JAVASCRIPT from "./../Assets/markdownFIles/JAVASCRIPT.mdx"
+import REACT from "./../Assets/markdownFIles/REACT.mdx"
+import PYTHON from "./../Assets/markdownFIles/PYTHON.mdx"
+import SQLITE from "./../Assets/markdownFIles/SQLite.mdx"
 
 /* -----> Styles <----- */
 import "@code-hike/mdx/styles"  // Styles

@@ -11,6 +11,12 @@ const MarkdownStyles = styled.div`
     align-items: flex-start;
     gap: 5px;
 
+    details{
+      width:100%;
+       max-width:920px !important;
+    }
+
+
     h1, h2, h3, h4, h5, h6 {
         margin-top: 20px;
         font-weight: bold;
@@ -29,8 +35,8 @@ const MarkdownStyles = styled.div`
     ol { list-style-type: number; margin-left: 25px; }
 
     code { 
-          width:100% !important; 
-       max-width:720px !important;
+       width:100% !important; 
+       max-width:920px !important;
     }
   
   table{

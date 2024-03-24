@@ -14,6 +14,7 @@ import Skills from "./Pages/Skills"
 import Projects from "./Pages/Projects"
 import Learning from "./Pages/Learning"
 import Contact from "./Pages/Contact"
+import Login from "./Pages/Login"
 
 /* -----> Features <----- */
 import Cursor from './Features/Cursor'
@@ -40,6 +41,8 @@ const App = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/learning" element={<Learning />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+
           </Routes>
         </BrowserRouter>
         <Cursor />

@@ -6,7 +6,7 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 /* -----> Configuration Objects <----- */
-import { colors, poisson, confetti } from "./Configurations"
+import { colors } from "./Configurations"
 
 
 const Colors = () => {

@@ -84,3 +84,8 @@ Drawing :
         - Contact
    * Features  
         - Cursor
+
+### Secure Data
+Prevent the information from Hackers.
+Secrete Information
+1. `.env` file => add this file in gitignore

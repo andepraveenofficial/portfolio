@@ -16,53 +16,77 @@ const MarkdownStyles = styled.div`
        max-width:920px !important;
     }
 
-
-    h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
         margin-top: 20px;
         font-weight: bold;
     }
 
-    h1 { font-size: 32px; }
-    h2 { font-size: 24px; }
-    h3 { color: gray; font-size: 20px; }
-    h4 { font-size: 20px; }
-    h5 { color: green; font-size: 16px; }
-    h6 { font-size: 16px; }
+    h1 { font-size: 36px; color: #F06292; }
+    h2 { font-size: 28px; color: #64B5F6; }
+    h3 { font-size: 24px; color: #FFB74D; }
+    h4 { font-size: 20px; color: #81C784; }
+    h5 { font-size: 18px; color: #BA68C8; }
+    h6 { font-size: 16px; color: #4DB6AC; }
 
-    p { margin-top: 5px; font-size: 16px; }
+    p { margin-top: 10px; font-size: 18px; }
 
     ul { list-style-type: disc; margin-left: 25px; }
     ol { list-style-type: number; margin-left: 25px; }
 
-    code { 
-       width:100% !important; 
-       max-width:920px !important;
-    }
-  
-  table{
+code { 
+    width: 100% !important; 
+    max-width: 920px !important;
+}
+
+
+code:not(.ch-code-scroll-parent) {
+    font-family: 'Fira Code', monospace;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+table {
   border-collapse: collapse;
-  width: 100%; 
-  margin: 0 auto; 
-  }
-
-thead{
-background-color: #f0f0f0; 
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures box shadow doesn't bleed outside */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
-tr{
-border-bottom: 1px solid #ddd; 
-  &:nth-child(even) {
-    background-color: #f5f5f5;
+
+thead {
+  background-color: #f0f0f0;
 }
-  
-th{
-  padding: 10px;
-  text-align: left; 
+
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+
+th,
+td {
+  padding: 15px; /* Increased padding for better spacing */
+  text-align: left;
+}
+
+
+th {
   font-weight: bold;
+  color: #333; /* Darker text color */
 }
 
-td{
- padding: 10px;
+
+tr:hover {
+  background-color: #e0e0e0; /* Lighter background color on hover */
 }
  
 `;

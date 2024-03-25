@@ -42,7 +42,6 @@ const App = () => {
             <Route path="/learning" element={<Learning />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
-
           </Routes>
         </BrowserRouter>
         <Cursor />

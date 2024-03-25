@@ -7,11 +7,14 @@ import { Link } from 'react-router-dom';
 import { AiFillGithub } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Logo from "./../Assets/Logo"
+import useOnlineStatus from "../Hooks/useOnlineStatus";
 
 
 /* -----> Component <----- */
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const isOnline = useOnlineStatus()
 
     // Methods
     const toggleMenu = () => {
@@ -20,6 +23,7 @@ const Header = () => {
 
     // React Elements
     const socialIcons = <>
+        <span>{isOnline ? "🔴" : "🟢"}</span>
         <a href="https://www.linkedin.com/in/andepraveen/" target="blank" className="p-2 rounded-full hover:bg-gray-600">
 
             <FaLinkedinIn className='w-6 h-6 text-white ' />
@@ -37,7 +41,7 @@ const Header = () => {
                     <Logo />
                 </div>
                 <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
-                    <div className={isMenuOpen ? 'hidden' : 'hidden gap-2 md:flex z-50'}>
+                    <div className={isMenuOpen ? 'hidden' : 'hidden gap-2 md:flex z-50 items-center'}>
                         {socialIcons}
                     </div>
 

@@ -766,7 +766,15 @@ const output = arr.map(function a(item){
     console.log(item)
 })
 
+```
 
+```js 
+// Anonymous Function
+let b = [1,2,3].map(()=>{debugger})
+
+// Named Function
+let a = () => {debugger};
+let b = [1,2,3].map(a)
 ```
 
 ```js
@@ -1806,7 +1814,7 @@ console.log(output);  // Hello Ande Praveen
 ![Variable Storage](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711007210/portfolio/markdown/javascript/code_working/hoisting/03_Variable_Storage.gif)  
 ![var Keyword Storage](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711007214/portfolio/markdown/javascript/code_working/hoisting/04_var_keyword_Storage.gif)  
 ![Execution Phase](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711007217/portfolio/markdown/javascript/code_working/hoisting/05_Execution_Phase.gif)  
-![undefined value](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711007221/portfolio/markdown/javascript/code_working/hoisting/06_undefined.gif)  
+![undefined](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711007221/portfolio/markdown/javascript/code_working/hoisting/06_undefined.gif)  
 ![Reference Error](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711007225/portfolio/markdown/javascript/code_working/hoisting/07_Reference_Error.gif)  
 ![Assign Original Values](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711007239/portfolio/markdown/javascript/code_working/hoisting/08_Assign_Original_Values.gif)  
 
@@ -1816,17 +1824,18 @@ console.log(output);  // Hello Ande Praveen
 ![Timer](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015407/portfolio/markdown/javascript/code_working/event_loop/03_Timer.gif)  
 ![Callback Queue](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015406/portfolio/markdown/javascript/code_working/event_loop/04_Callback_Queue.gif)  
 ![Event Loop](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015407/portfolio/markdown/javascript/code_working/event_loop/05_Event_Loop.gif)  
-![Event Loop output](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015409/portfolio/markdown/javascript/code_working/event_loop/06_Output.gif)  
+![output](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015409/portfolio/markdown/javascript/code_working/event_loop/06_Output.gif)  
 ![Timer Example](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015411/portfolio/markdown/javascript/code_working/event_loop/07_Timer_Example.gif)  
 
 ##### Microtask Queue
-![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015955/portfolio/markdown/javascript/code_working/microtask_queue/microtask1.gif)  
-![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015956/portfolio/markdown/javascript/code_working/microtask_queue/microtask2.gif)  
-![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015957/portfolio/markdown/javascript/code_working/microtask_queue/microtask3.gif)  
-![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015962/portfolio/markdown/javascript/code_working/microtask_queue/microtask4.gif)  
-![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015962/portfolio/markdown/javascript/code_working/microtask_queue/microtask5.gif)  
-![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015967/portfolio/markdown/javascript/code_working/microtask_queue/microtask6.gif) 
-![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015979/portfolio/markdown/javascript/code_working/microtask_queue/microtask7.gif)  
+![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015967/portfolio/markdown/javascript/code_working/microtask_queue/microtask1.gif)  
+![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015967/portfolio/markdown/javascript/code_working/microtask_queue/microtask2.gif)  
+![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015967/portfolio/markdown/javascript/code_working/microtask_queue/microtask3.gif)  
+![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015967/portfolio/markdown/javascript/code_working/microtask_queue/microtask4.gif)  
+![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015967/portfolio/markdown/javascript/code_working/microtask_queue/microtask5.gif)  
+![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015967/portfolio/markdown/javascript/code_working/microtask_queue/microtask6.gif)  
+![Microtask](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711015967/portfolio/markdown/javascript/code_working/microtask_queue/microtask7.gif)  
+
 
 </details>
 
@@ -1949,7 +1958,7 @@ If the event happens again before the timer expires, you reset the timer.
 Only when the timer expires without another event occurring, you finally execute the function.
 This prevents the function from being called too frequently and helps in optimizing performance, especially for tasks like handling user input or updating UI elements.
 
-![debouncing.gif]https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711016632/portfolio/markdown/javascript/core_javascript/debouncing.gif)
+![debouncing.gif](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711016632/portfolio/markdown/javascript/core_javascript/debouncing.gif)
 
 ```js 
 // Debouncing

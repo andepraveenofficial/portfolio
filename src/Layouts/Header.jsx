@@ -1,4 +1,3 @@
-import { FaLinkedinIn } from "react-icons/fa";
 /* -----> Third Party Packages <----- */
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -6,14 +5,18 @@ import { Link } from 'react-router-dom';
 /* -----> Icons & Logos <----- */
 import { AiFillGithub } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaLinkedinIn } from "react-icons/fa";
 import Logo from "./../Assets/Logo"
-import useOnlineStatus from "../Hooks/useOnlineStatus";
 
+/* -----> Hooks <----- */
+import useOnlineStatus from "../Hooks/useOnlineStatus";
 
 /* -----> Component <----- */
 const Header = () => {
+    // Local State
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // Hooks
     const isOnline = useOnlineStatus()
 
     // Methods

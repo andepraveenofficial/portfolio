@@ -1,7 +1,5 @@
-
 /* -----> Third Party Packages <----- */
 import { useState } from "react";
-
 
 /* -----> Logos & Icons <----- */
 import { GiHamburgerMenu } from "react-icons/gi";

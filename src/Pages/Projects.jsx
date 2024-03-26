@@ -1,6 +1,5 @@
 
 /* -----> Third Party Packages <----- */
-import styled from "styled-components";
 import { motion } from "framer-motion";
 
 /* -----> Icons & Logos <----- */
@@ -12,11 +11,7 @@ import { BsYoutube } from "react-icons/bs";
 /* -----> Styles <----- */
 import { Heading } from "../StyledComponents";
 import { ProjectIcon, ProjectTitle } from "../StyledComponents";
-
-
-
 const projectICONsStyles = "hover:shadow-lg hover:transition hover:scale-110 text-8xl hover:border hover:rounded-lg p-2"
-
 
 /* -----> Hard Data <----- */
 const myProjects = [

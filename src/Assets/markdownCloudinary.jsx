@@ -57,3 +57,21 @@ export const recursively = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1
 export const dataflow = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017660/portfolio/markdown/react/dataflow.webp"
 export const class_component_life_cycle = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017681/portfolio/markdown/react/Life_Cycle.png"
 export const authentication = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017654/portfolio/markdown/react/authentication.png"
+
+// PYTHON 
+
+// SQLite 
+export const dbms_flow = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430974/portfolio/markdown/sqlite/dbms-flow.png"
+export const relational_database = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431091/portfolio/markdown/sqlite/relational-database.png"
+export const non_relational_database = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431091/portfolio/markdown/sqlite/non-relational-database.png"
+export const logical_operators = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430996/portfolio/markdown/sqlite/logical-operators.png"
+export const in_operator = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430995/portfolio/markdown/sqlite/in-operator.png"
+export const between_operator = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430955/portfolio/markdown/sqlite/between_operator.png"
+export const aggregation_sum = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430965/portfolio/markdown/sqlite/aggregation_sum.gif"
+export const group_by__having = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430995/portfolio/markdown/sqlite/group_by_having.gif"
+export const right_join = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431099/portfolio/markdown/sqlite/right_join.gif"
+export const natural_join = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431052/portfolio/markdown/sqlite/natural_join.gif"
+export const inner_join = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431017/portfolio/markdown/sqlite/inner_join.gif"
+export const left_join = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431007/portfolio/markdown/sqlite/left_join.gif"
+export const full_join = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430980/portfolio/markdown/sqlite/full-join.gif"
+export const cross_join = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430964/portfolio/markdown/sqlite/cross_join.gif"

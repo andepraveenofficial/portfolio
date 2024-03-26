@@ -3,7 +3,7 @@
 <details>
 <summary>Index</summary>
 
-### Index
+## Index
 * Database
 * Introduction to SQL
 * SQL commands
@@ -28,9 +28,9 @@
 <details>
 <summary>Database</summary>
 
-### Database
+## Database
 
-##### Data
+### Data
 Any information that is stored is called data.
 
 __Examples__:
@@ -38,35 +38,35 @@ __Examples__:
 * __Products and orders__ on Amazon
 * __Contact details__ in telephone directory..etc
 
-##### Database
+### Database
 An organised collection of data is called a database.
 
-##### DBMS
+### DBMS
 __DBMS__ stands for __Database Management System__  
 A software that is used to easily __store__ and __access__ data from the database in a secure way.
-![DBMS](./Assets/dbms-flow.png)
+![DBMS Flow](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430974/portfolio/markdown/sqlite/dbms-flow.png)
 
-##### Types of Databases
+### Types of Databases
 1. Relational Database
 2. Non-Relational Database
 
-##### Relational Database
+### Relational Database
 __RDBMS__ stands for __Relational DBMS__  
 A relational DBMS is a DBMS designed specially for relational database. Relational databases organise the data in the form of tables.
 
 __Examples__ :  
 `Oracle`, `MySQL`, `SQLite`
 
-![Relational Database](./Assets/relational-database.png)
+![Relational Database](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431091/portfolio/markdown/sqlite/relational-database.png)
 
-##### Non-Relational Database
+### Non-Relational Database
 A No-relational DBMS is a DBMS designed specially for non-relational databases. Non-relational databases store the data in a non-tabular form.
 
 Example:  
 `MongoDB`, `Redis`
 
 
-![Non-Relational Database](./Assets/non-relational-database.png)
+![Non-Relational Database](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431091/portfolio/markdown/sqlite/non-relational-database.png)
 </details>
 
 ---
@@ -74,12 +74,12 @@ Example:
 <details>
 <summary>Introduction to SQL</summary>
 
-### Introduction to SQL
+## Introduction to SQL
 
 __SQL__ stands for __Structured Query Language__  
 * SQL is used to perform operations on Relational DBMS.
 * SQL is easy to learn
-* SQL provides multiple commands to perform various operations like `create`, `retrive`, `update` and `delete` the data.
+* SQL provides multiple commands to perform (CRUD) various operations like `create`, `retrive`, `update` and `delete` the data.
 
 </details>
 
@@ -108,7 +108,7 @@ __CRUD__ operations:
 | Delete    | `DELETE FROM table_name WHERE condition;` |
 
 
-##### Create Table
+#### Create Table
 
 ```sql 
 CREATE TABLE player(
@@ -129,13 +129,13 @@ CREATE TABLE player(
 | DATETIME | Represents a combination of date and time. |
 | BOOLEAN | Represents true or false values. |
 
-##### Table Information
+#### Table Information
 
 ```sql 
     PRAGMA TABLE_INFO(player);
 ```
 
-##### Inserting ROWS
+#### Inserting ROWS
 
 ```sql 
 INSERT INTO 
@@ -145,7 +145,7 @@ VALUES
      ("Sai", 47, 30);
 ```
 
-##### Retrieving Data
+#### Retrieving Data
 
 ##### Selecting All Columns
 ```sql 
@@ -173,7 +173,7 @@ FROM player
 WHERE name = "Sai";
 ```
 
-##### Update Rows
+#### Update Rows
 
 ##### Update All Rows
 
@@ -195,7 +195,7 @@ WHERE
    name = "Ram";
 ```
 
-##### Delete Rows
+#### Delete Rows
 
 ##### Delete All Rows
 ```sql 
@@ -239,9 +239,9 @@ ALTER TABLE
 <details>
 <summary>Operators</summary>
 
-### Operators
+## Operators
 
-##### Comparison Operators
+### Comparison Operators
 * `__=__`  Equal to
 * `__<>__`  Not Equal to
 * `__<__`  Less than
@@ -255,7 +255,7 @@ ALTER TABLE
   WHERE age <> 20;
 ```
 
-##### String Operations
+### String Operations
 `LIKE` Operator is used to perform queries on strings. This operator is especially used in `WHERE` clause to retrieve all the rows that match the given pattern.
 
 | Symbol            | Description                        | Example                     |
@@ -292,7 +292,7 @@ WHERE
   brand LIKE "_____";
 ```
 
-##### Logical Operators
+### Logical Operators
 with logical operators, we can perform queries based on multiple conditions.
 * AND
 * OR
@@ -323,7 +323,7 @@ FROM
 WHERE
   NOT name LIKE "%Cake%";
 ``` 
-![Logical Operators](./Assets/logical-operators.png)
+![Logical Operators](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430996/portfolio/markdown/sqlite/logical-operators.png)
 
 ```sql 
 SELECT
@@ -349,9 +349,9 @@ WHERE
     OR brand = "OnePlus";
 ```
 
-##### IN operator
+### IN operator
 Retrieves the corresponding rows from the table if the value of column(c1) is present in the given values(v1,v2,..).
-![IN Operator](./Assets/in-operator.png)
+![IN Operator](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430995/portfolio/markdown/sqlite/in-operator.png)
 
 ```sql 
 SELECT
@@ -362,9 +362,9 @@ WHERE
   brand IN ( "Puma", "Levi's", "Mufti", "Lee", "Denim");
 ```
 
-##### BETWEEN Operator
+### BETWEEN Operator
 Retrieves all the rows from table that have cloumn(c1) value present between the given range(v1 and v2).
-![BETWEEN Operator](./Assets/between_operator.png)
+![BETWEEN Operator](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430955/portfolio/markdown/sqlite/between_operator.png)
 
 ```sql 
 SELECT
@@ -381,7 +381,7 @@ WHERE
 Note : When using the BETWEEN operator, the first value should be less than second value. If not, we'll get an incorrect result depending on the DBMS.
 
 
-##### ORDER BY
+### ORDER BY
 Arrange Ascending order or Descending order.
 `column1 ASC / DESC,`
 
@@ -399,7 +399,7 @@ ORDER BY
   rating DESC;
 ```
 
-##### DISTINCT
+### DISTINCT
 `DISTINCT` clause is used to return the distinct i.e unique values.
 
 ```sql 
@@ -418,12 +418,12 @@ ORDER BY
 <details>
 <summary>Pagination</summary>
 
-### Pagination
+## Pagination
 we get limited data only.
 * LIMIT 
 * OFFSET
 
-##### LIMIT
+### LIMIT
 LIMIT clause is used to specify the number of rows(n) we would like to have in result.
 
 ```sql 
@@ -440,7 +440,7 @@ ORDER BY
 LIMIT 2;
 ```
 
-##### OFFSET
+### OFFSET
 OFFSET clause is used to specify the position (from nth row) from where the chunk of the results are to be selected.
 
 ```sql 
@@ -463,9 +463,9 @@ OFFSET 5;
 <details>
 <summary>Aggregations</summary>
 
-### Aggregations
+## Aggregations
 
-##### Aggregation Functions
+### Aggregation Functions
 Combining multiple values into a single value is called aggregation.
 
 | Aggregate Function | Description                                      |
@@ -476,7 +476,7 @@ Combining multiple values into a single value is called aggregation.
 | MAX                | Returns the maximum value                        |
 | AVG                | Calculates the average of the values            |
 
-![Agregation SUM](./Assets/aggregation_sum.gif)
+![Agregation SUM](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430965/portfolio/markdown/sqlite/aggregation_sum.gif)
 
 ```sql 
 SELECT
@@ -508,7 +508,7 @@ WHERE
 <details>
 <summary>Alias</summary>
 
-### Alias
+## Alias
 Using the keyword `AS`, we can provide alternate temporary names to the columns in the output.
 
 ```sql
@@ -526,7 +526,7 @@ FROM
 
 ### GROUP BY with HAVING
 
-##### GROUP BY 
+#### GROUP BY 
 The `GROUP BY` clause in SQL is used to group rows which have same values for the mentioned attributes.
 
 ```sql 
@@ -536,7 +536,7 @@ FROM
   player_match_details
 GROUP BY name;
 ```
-![GROUP BY](./Assets/group_by.gif)
+![GROUP BY](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430995/portfolio/markdown/sqlite/group_by_having.gif)
 
 ```sql 
 SELECT
@@ -546,9 +546,9 @@ FROM
 WHERE score >= 50
 GROUP BY name;
 ```
-![GROUP BY with WHERE](./Assets/group_by_where.gif)
+![GROUP BY with HAVING](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431017/portfolio/markdown/sqlite/having.gif)
 
-##### HAVING
+#### HAVING
 `HAVING` clause is used to filter the resultant rows after the application of `GROUP BY` clause.
 
 ```sql 
@@ -573,9 +573,9 @@ HAVING
 <details>
 <summary>Expressions</summary>
 
-### Expressions
+## Expressions
 
-##### Using Expressions in SELECT Clause
+### Using Expressions in SELECT Clause
 
 ```sql 
 SELECT 
@@ -584,7 +584,7 @@ FROM
     movie;
 ```
 
-##### Using Expressions in WHERE Clause
+### Using Expressions in WHERE Clause
 
 ```sql 
 SELECT
@@ -595,13 +595,13 @@ WHERE
    (collection_in_cr - budget_in_cr) >= 50;
 ```
 
-##### Using Expressions in UPDATE Clause
+### Using Expressions in UPDATE Clause
 ```sql 
 UPDATE movie
 SET rating = rating/2;
 ```
 
-##### Expressions in HAVING Clause
+### Expressions in HAVING Clause
 
 ```sql 
 SELECT
@@ -620,13 +620,14 @@ HAVING
 <details>
 <summary>SQL Functions</summary>
 
-### SQL Functions
+## SQL Functions
 1. __Date Functions__: Used to work with dates or times
 2. __Cast Functions__: Used to change the data type of a value
 3. __Arithmetic Functions__: Used to perform calculations on numbers
 
-##### Date Functions
-##### strftime()
+### Date Functions
+
+#### strftime()
 `strftime()` function is used to extract year, month, day, hour, etc. from a date (or) datetime field based on a specified format as strings.
 
 | Format | Description           | Output Format          | Function                    | Behavior           |
@@ -648,7 +649,7 @@ GROUP BY
     strftime('%m', release_date);
 ```
 
-##### CAST Function
+#### CAST Function
 In database management systems, the CAST function is used to convert a value from one data type to another data type.   
 `CAST(value AS data_type);`
 
@@ -664,7 +665,7 @@ GROUP BY
   strftime('%m', release_date);
 ```
 
-##### Arithmetic Functions
+#### Arithmetic Functions
 Arithmetic functions in SQL are used to perform mathematical operations on numeric values. Some commonly used arithmetic functions are `FLOOR`, `CEIL`, and `ROUND`.
 
 * __FLOOR__ Function :  
@@ -691,7 +692,7 @@ FROM
   movie;
 ```
 
-##### String Functions
+#### String Functions
 String functions in SQL are used to manipulate and operate on string values or character data.
  
 | SQL Function | Behavior                               |
@@ -715,7 +716,7 @@ WHERE
 <details>
 <summary>CASE</summary>
 
-### CASE Clause
+## CASE Clause
 SQL provides __CASE__ clause to perform conditional operations. This is similar to the switch case / if-else conditions in other programming languages.
 
 ```sql 
@@ -736,7 +737,7 @@ FROM
 <details>
 <summary>SET Operators</summary>
 
-### SET Operators
+## SET Operators
 The SQL Set operation is used to combine the two or more SQL queries.
 1. INTERSECT
 2. MINUS
@@ -787,7 +788,7 @@ ORDER BY 1 DESC;
 <details>
 <summary>Milestone</summary>
 
-### Clauses
+## Clauses
 
 | Clause       | How to Use It                             | Functionality                                              |
 | ------------ | ---------------------------------------- | --------------------------------------------------------- |
@@ -810,7 +811,7 @@ ORDER BY 1 DESC;
 | CASE         | CASE WHEN condition1 THEN value1 ... END | Returns a corresponding value when a condition is met     |
 
 
-##### Operators
+## Operators
 
 | Operator  | How to Use It                    | Functionality                                                                                      |
 | --------- | -------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -823,7 +824,7 @@ ORDER BY 1 DESC;
 | IN        | `WHERE col IN ('Apple', 'Microsoft')` | Retrieves rows if the column value matches any of the given values                       |
 | BETWEEN   | `WHERE col BETWEEN 3 AND 5`      | Retrieves rows where the column value falls within the specified range (inclusive)              |
 
-##### Functions
+## Functions
 
 | Function     | How to Use It                      | Functionality                                                                      |
 | ------------ | ---------------------------------- | ---------------------------------------------------------------------------------- |
@@ -847,9 +848,9 @@ ORDER BY 1 DESC;
 <details>
 <summary>Relational Database</summary>
 
-### Relational Database
+## Relational Database
 
-##### Customer Table
+### Customer Table
 ```sql 
 CREATE TABLE customer (
    id INTEGER NOT NULL PRIMARY KEY,
@@ -858,7 +859,7 @@ CREATE TABLE customer (
 );
 ```
 
-##### Product Table
+### Product Table
 
 ```sql 
 CREATE TABLE product (
@@ -870,7 +871,7 @@ CREATE TABLE product (
 );
 ```
 
-##### Address Table
+### Address Table
 
 ```sql 
 CREATE TABLE address(
@@ -883,7 +884,7 @@ CREATE TABLE address(
 );
 ```
 
-##### Cart Table
+### Cart Table
 
 ```sql 
 CREATE TABLE cart(
@@ -894,7 +895,7 @@ CREATE TABLE cart(
 );
 ```
 
-##### Cart Product Table (Junction Table)
+### Cart Product Table (Junction Table)
 ```sql 
 CREATE TABLE cart_product(
   id INTEGER NOT NULL PRIMARY KEY,
@@ -912,13 +913,13 @@ CREATE TABLE cart_product(
 <details>
 <summary>JOINS</summary>
 
-### JOINS
+## JOINS
 JOINS are used to combining the tables. 
 
-##### Natural JOIN
+### Natural JOIN
 `NATURAL JOIN` combines the tables based on the common columns.
 
-![NATURAL JOIN](./Assets/natural_join.gif)
+![NATURAL JOIN](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431052/portfolio/markdown/sqlite/natural_join.gif)
 
 ```sql 
 SELECT course.name,
@@ -928,10 +929,10 @@ FROM course
 WHERE instructor.full_name = "Alex";
 ```
 
-##### INNER JOIN
+### INNER JOIN
 `INNER JOIN` combines rows from both the tables if they meet a specified condition.
 
-![INNER JOIN](./Assets/inner_join.gif)
+![INNER JOIN](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431017/portfolio/markdown/sqlite/inner_join.gif)
 
 ```sql 
 SELECT student.full_name,
@@ -943,10 +944,10 @@ FROM
 WHERE review.course_id = 15;
 ```
 
-##### LEFT JOIN
+### LEFT JOIN
 In `LEFT JOIN`, for each row in the left table, matched rows from the right table are combined. If there is no match, NULL values are assigned to the right half of the rows in the temporary table.
 
-![LEFT JOIN](./Assets/left_join.gif)
+![LEFT JOIN](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431007/portfolio/markdown/sqlite/left_join.gif)
 
 ```sql 
 SELECT student.full_name
@@ -956,7 +957,7 @@ FROM
 WHERE student_course.id IS NULL;
 ```
 
-##### Joins on Multiple Tables
+### Joins on Multiple Tables
 We can also perform join on a combined table.
 
 ```sql 
@@ -970,11 +971,11 @@ FROM
 WHERE course.instructor_id = 102;
 ```
 
-##### RIGHT JOIN
+### RIGHT JOIN
 `RIGHT JOIN` or `RIGHT OUTER JOIN` is vice versa of LEFT JOIN.
 I.e., in RIGHT JOIN, for each row in the right table, matched rows from the left table are combined. If there is no match, NULL values are assigned to the left half of the rows in the temporary table.
 
-![RIGHT JOIN](./Assets/right_join.gif)
+![RIGHT JOIN](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711431099/portfolio/markdown/sqlite/right_join.gif)
 
 ```sql 
 SELECT course.name,
@@ -984,10 +985,10 @@ FROM
         ON course.instructor_id = instructor.instructor_id;
 ```
 
-##### FULL JOIN
+### FULL JOIN
 `FULL JOIN` or `FULL OUTER JOIN` is the result of both RIGHT JOIN and LEFT JOIN
 
-![FULL JOIN](./Assets/full-join.gif)
+![FULL JOIN](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430980/portfolio/markdown/sqlite/full-join.gif)
 
 ```sql 
 SELECT course.name,
@@ -997,11 +998,11 @@ FROM
        ON course.instructor_id = instructor.instructor_id;
 ```
 
-##### CROSS JOIN
+### CROSS JOIN
 In `CROSS JOIN`, each row from the first table is combined with all rows in the second table. 
 Cross Join is also called as CARTESIAN JOIN
 
-![CROSS JOIN](./Assets/cross_join.gif)
+![CROSS JOIN](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430964/portfolio/markdown/sqlite/cross_join.gif)
 
 ```sql 
 SELECT 
@@ -1011,7 +1012,7 @@ FROM
     course CROSS JOIN instructor;
 ```
 
-##### SELF JOIN
+### SELF JOIN
 So far, we have learnt to combine different tables. We can also combine a table with itself. This kind of join is called SELF-JOIN.
 
 ```sql 
@@ -1024,7 +1025,7 @@ WHERE
     sc1.student_id < sc2.student_id;
 ```
 
-##### Summary
+### Summary
 | Join Type     | Use Case                                               |
 | ------------- | ------------------------------------------------------ |
 | Natural Join  | Joins based on common columns                          |
@@ -1041,7 +1042,7 @@ WHERE
 <details>
 <summary>SubQueries</summary>
 
-### SubQueries
+## SubQueries
 We can write nested queries, i.e., a query inside another query.
 
 ```sql 
@@ -1080,6 +1081,82 @@ WHERE
   );
 ```
 
+</details>
+
+---
+
+<details>
+<summary>Practice</summary>
+
+## Practice
+
+```sql 
+-- 01 create table 
+-- CREATE TABLE mytable(
+--     id INTEGER NOT NULL PRIMARY KEY,
+--     name VARCHAR(200),
+--     place VARCHAR(200),
+--     salary INTEGER
+-- );
+
+-- 02 insert data 
+-- INSERT INTO 
+--     mytable(id, name, place, salary)
+--     VALUES(1, "Praveen", "Hyderabad", 50000),
+--           (2, "Navya", "Bangalore", 80000),
+--           (3, "Swathi", "Chennai", 70000);
+
+-- 03 select 
+
+-- all columns 
+-- SELECT * FROM mytable;
+
+-- specific column 
+-- SELECT name FROM mytable;
+
+-- specific row 
+-- SELECT name 
+-- FROM mytable
+-- WHERE name LIKE "Praveen";
+
+-- 04 update 
+
+-- update all rows 
+-- UPDATE mytable
+-- SET salary = 40000;
+
+-- update specific row 
+-- UPDATE mytable
+-- SET salary = 80000
+-- WHERE name LIKE "Praveen";
+
+-- delete 
+
+-- delete all rows 
+-- DELETE FROM mytable;
+
+-- delete specific row 
+-- DELETE FROM mytable
+-- WHERE name LIKE "Navya";
+
+-- drop 
+
+-- DROP TABLE mytable;
+
+--  order
+-- SELECT * 
+-- FROM mytable
+-- ORDER BY 
+--     salary DESC;
+
+-- pagination 
+-- SELECT * 
+-- FROM mytable
+-- ORDER BY 
+--     salary DESC
+-- LIMIT 1
+-- OFFSET 1;
+```
 </details>
 
 ---

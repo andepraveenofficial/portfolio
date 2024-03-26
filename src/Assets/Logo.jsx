@@ -33,7 +33,6 @@ const Logo = () => {
                 <h1 className="self-center text-2xl font-semibold text-white whitespace-nowrap">Ande Praveen</h1>
             </motion.div>
         </Link>
-
     );
 }
 

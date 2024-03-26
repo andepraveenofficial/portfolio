@@ -59,6 +59,21 @@ export const class_component_life_cycle = "https://res.cloudinary.com/dwrwbjd3h/
 export const authentication = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017654/portfolio/markdown/react/authentication.png"
 
 // PYTHON 
+export const list = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470720/portfolio/markdown/python/data_structures/list.webp"
+export const if_statement = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470685/portfolio/markdown/python/conditional_statements/if.webp"
+export const if_else = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470689/portfolio/markdown/python/conditional_statements/if-else.webp"
+export const if_elif_else = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470687/portfolio/markdown/python/conditional_statements/if-elif-else.png"
+export const while_loop = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470717/portfolio/markdown/python/looping_statements/while.webp"
+export const for_loop = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470708/portfolio/markdown/python/looping_statements/for.webp"
+export const nested_loop = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470710/portfolio/markdown/python/looping_statements/nested_loop.webp"
+export const while_break = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470696/portfolio/markdown/python/looping_statements/break1.webp"
+export const for_break = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470696/portfolio/markdown/python/looping_statements/break1.webp"
+export const while_continue = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470701/portfolio/markdown/python/looping_statements/continue1.webp"
+export const for_continue = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470705/portfolio/markdown/python/looping_statements/continue2.webp"
+export const pass1 = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470714/portfolio/markdown/python/looping_statements/pass1.webp"
+export const pass2 = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470712/portfolio/markdown/python/looping_statements/pass2.webp"
+export const polymorphism = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470747/portfolio/markdown/python/oops/polymorphism.webp"
+export const encapsulation = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711470735/portfolio/markdown/python/oops/encapsulation.jpg"
 
 // SQLite 
 export const dbms_flow = "https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711430974/portfolio/markdown/sqlite/dbms-flow.png"

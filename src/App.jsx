@@ -21,6 +21,8 @@ import Cursor from './Features/Cursor'
 // import BackgroundEffects from "./Features/BackgroundEffects"
 const BackgroundEffects = lazy(() => import("./Features/BackgroundEffects"))
 
+/* -----> Styles <----- */
+import './App.css';
 
 /* -----> Component <----- */
 const App = () => {

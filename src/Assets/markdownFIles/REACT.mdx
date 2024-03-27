@@ -5,7 +5,7 @@
 <details>
 <summary>Index</summary>
 
-### Index
+## Index
 * General 
 * Introduction
 * ReactApp Setup with CDN
@@ -40,7 +40,7 @@
 <details>
 <summary>General</summary>
 
-# General
+## General
 
 ### Emmet
 Emmet is a tool that helps developers write and edit code more quickly. 
@@ -58,9 +58,9 @@ It provides a collection of shortcuts that can be expanded into full blocks of c
 <details>
 <summary>Introduction</summary>
 
-### Introduction
+## Introduction
 
-##### ReactJS
+### ReactJS
 * __React JS__ is an open-source JavaScript library. It was developed by Facebook. 
 * React code written by Facebook developers, and maintained by Facebook.
 * ReactJS is used to building __user interfaces__.  
@@ -68,7 +68,7 @@ It provides a collection of shortcuts that can be expanded into full blocks of c
 * React allows us to create __reusable components__ and __Composable Components__. 
 * React at the end of the day is just Javascript.
 
- ##### Advantages of ReactJS
+ ### Advantages of ReactJS
  * Open Source
  * Easy to Learn
  * Large Community
@@ -76,7 +76,7 @@ It provides a collection of shortcuts that can be expanded into full blocks of c
  * Reusable of components
  * Virtual DOM
 
- ##### React Version
+ ### React Version
 Now I am using latest version.
   `react@18.2.0`
 
@@ -87,9 +87,9 @@ Now I am using latest version.
 <details>
 <summary>ReactApp Setup with CDN</summary>
 
-### ReactApp Setup with CDN
+## ReactApp Setup with CDN
 
-##### Running Javascript in HTML
+### Running Javascript in HTML
 We can run JavaScript in HTML using the HTML `<script>` element. It is used to include JavaScript in HTML.
 Here the __type__ attribute specifies the type of the `<script>`.
 
@@ -106,7 +106,7 @@ Here the __type__ attribute specifies the type of the `<script>`.
 </script>
 ```
 
-##### Running External Javascript in HTML
+### Running External Javascript in HTML
 We can run JavaScript in HTML using the HTML `<script>` element. It is used to include JavaScript in HTML.
 Here the __type__ attribute specifies the type of the `<script>`.
 To include an external JavaScript file, we can use the HTML `<script>` element with the attribute __src__.
@@ -120,7 +120,7 @@ The __src__ attribute specifies the path of an external JS file.
 
 ### ReactJS with CDN
 
-##### CDN 
+#### CDN 
 __CDN__ stands for __Content Delivery Network__  
 * React CDN code is a plain javascript, So ReactJS is javascript library.
 * with React CDNs Browser understand the React JS.
@@ -138,7 +138,7 @@ __CDN__ stands for __Content Delivery Network__
 * Now we can Write ReactJS code in external js file.
 
 
-##### React Element
+### React Element
 * `React.createElement()` method used to create an element using React JS.  
 * It is similar to the `document.createElement()` method in regular Javascript.
 * Syntax : `React.createElement(type, {attributes}, children)`
@@ -153,7 +153,7 @@ __CDN__ stands for __Content Delivery Network__
 const Heading = React.createElement("h1", {className: 'greeting'}, "Hello World")
 ```
 
-##### ReactDOM
+### ReactDOM
 __ReactDOM__ connect to the __Real DOM__.
 * `ReactDOM.render()` method is used to display the React element.
 * Syntax : `ReactDOM.render(reactElement, container); `
@@ -162,7 +162,7 @@ reactElement => What to render
 container => where to render
 
 
-##### Example 
+#### Example 
 
 ```js 
 /*
@@ -213,7 +213,7 @@ root.render(parent);
 <details>
 <summary>JSX</summary>
 
-# JSX
+## JSX
 __JSX__ stands for __JavaScript XML__
 * ReactJS introduced a new HTML like syntax named JSX to create elements. So, JSX makes life easier.
 * Web browsers can only read regular JS.
@@ -257,7 +257,7 @@ const Heading = React.createElement(
 const Heading = <h1 className="greeting">Hello World!</h1>
 ```
 
-##### JS Code in JSX
+### JS Code in JSX
 we can use curly braces `{}` to write any JS code inside __JSX__.
 
 ```js 
@@ -275,7 +275,7 @@ const templateLiteral = <h1>{`My age is ${number}`}</h1>
 
 ```
 
-##### React Fragment 
+### React Fragment 
 * __Fragment__ is used to return multiple elements from a React component.
 *  __Fragment__ is used to group a list of children without adding extra node to the DOM.  
 * The __Fragment__ is an alternate way to return a single JSX element. 
@@ -324,9 +324,9 @@ return(
 <details>
 <summary>Custom ReactApp Setup</summary>
 
-### Custom ReactApp Setup
+## Custom ReactApp Setup
 
-##### npm
+### npm
 npm is a packages' manager.
 Generally we can say  __node package manager__, but it has no abbreviation.
 npm is a standard central repository for all the node packages.
@@ -334,14 +334,14 @@ we can easily install any __Node.js__ package or library by using the `npm` comm
 Example : `npm install react`
 
 
-##### Local __npm__
+### Local __npm__
 Local `npm` helps in managing our React project __dependencies__ by creating a `package.json` file. 
 This `package.json` file contains information about our project and the specific packages it depends on. 
 It keeps track of the package versions used in our project.
 * we use __Local npm__ because we want a lot of packages in our ReactApp.
 * `npm` simplifies the process of installing and managing packages in our Node.js projects by providing a centralized repository and a command-line interface to install packages with ease.
 
-##### ReactApp Setup
+### ReactApp Setup
 1. Local `npm` setup   
    - `npm init` : This command allows you to provide your own configuration for create `package.json` file.
    - `npm init -y` : This command automatically creates the `package.json` file with default settings, skipping the custom configuration. 
@@ -368,7 +368,7 @@ It keeps track of the package versions used in our project.
     - It reads the package.json file and installs all the required packages mentioned in the file.
  
 
-##### Versions 
+### Versions 
 In the `package.json` file, the ~ and ^ symbols are used to define the version ranges for the packages installed.
 **~** or **^** in `package.json` file : 
 These are used with the versions of the package installed.
@@ -397,7 +397,7 @@ For example  in `package.json` file:
 }
 ```
 
-##### npx
+### npx
    - `npx` is a tool that comes with `npm`, when you installed npm above 5.2.0 version then automatically `npx` will be installed. It is a npm package runner that can execute any package that you want from the npm.
    - `npx` command is used to execute the package.
    - Example : `npx parcel index.html`
@@ -405,7 +405,7 @@ For example  in `package.json` file:
       * `.parcel-cache`
       * `dist`
 
-##### node_modules
+### node_modules
 - `node_modules` folder like a cache for the external modules that your project depends upon.
 - The `npm install` command is used to recreate the node_modules directory using the `package-lock.json` file.
 - When you `npm install` them, they are downloaded from the web and copied into the node_modules folder and Nodejs is trained to look for them there when you import them(without a specific path).
@@ -414,7 +414,7 @@ For example  in `package.json` file:
 - we don't put "node_modules" into git, because our `package-lock.json` file have sufficient information to recreate node_modules.  
 `package-lock.json` file keep & maintain the versions of everything in node_modules.
 
-##### Scripts 
+### Scripts 
   * server start
      - we can add key for avoiding every time start server `npx parcel index.html`.
      - `"start" : "npx parcel index.html"`
@@ -431,7 +431,7 @@ For example  in `package.json` file:
 	},     
 ```
 
-##### stop the server
+### stop the server
    - `ctrl + c`
 
 ### .gitignore
@@ -460,25 +460,25 @@ node_modules
 
 ```
 
-##### package-lock.json
+### package-lock.json
 * `package-lock.json` is a file that helps future developers and automated systems to easily download and install the same dependencies as your project.
 * It also allows you to switch to previous versions of the dependencies without actually saving changes to the node_modules folder.
 * The `package-lock.json` file contains important information about the dependencies and their specific versions used in your project. If you modify or delete this file, it can cause problems with the dependencies when deploying your project in the production environment. It's best not to modify the package-lock.json file because __npm__ automatically handles it for you to ensure the correct dependencies are installed.
 
-##### Q: What is the `dist` folder?
+### Q: What is the `dist` folder?
 we run command `npx parcel index.html` this will create a faster development version of our project & serves it on the server.  
 The /dist folder contains the minified version of your source code that is used in production for web applications.  It includes all the necessary files and modules that have been optimized and made as small as possible. This folder holds the final code that is ready to be deployed and used by users.  
 `npx parcel build index.html` it creates a lot of things, minify your file. and "parcel will build all the production files to the dist folder".
 
-##### Q: What is `browserslist`?
+### Q: What is `browserslist`?
 A: `Browserslist` is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file. It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
 
-##### parcel 
+### parcel 
 parcel is basically a bundler.  
 It is bundle our application. 
 it takes all your files and bundle into one file.
 
-##### App Example 
+### App Example 
 
 ```js 
 import React from 'react';
@@ -514,12 +514,12 @@ root.render(parent);
 <details>
 <summary>Ready Made ReactApp Setup</summary>
 
-### Ready Made ReactApp Setup
+## Ready Made ReactApp Setup
 Creating a real-world application involves a lot of setup because a large number of components need to be organised.
 1. create-react-app
 2. create-vite
 
-##### Create React Application
+### Create React Application
 1. Install `Node.js` from the official website.
 2. Install Create React App globally
     * `npm install -g create-react-app`
@@ -535,7 +535,7 @@ Creating a real-world application involves a lot of setup because a large number
 
 ### Bundler 
 
-##### Javascript Bundlers
+#### Javascript Bundlers
 * Bundlers are tools that help manage and combine different pieces of JavaScript code. 
 * To use a tool or library in our code, we need a package manager like `npm` or `yarn`.  
 
@@ -547,7 +547,7 @@ In React, to get external functionalities, we use Bundlers.
 2. Webpack -> Create React App
 3. Vite -> React Vite
 
-### Common Bundler Features
+#### Common Bundler Features
 1. Local Server => It creates a Local server 
 2. Port Number
 3. Tree Shaking
@@ -561,17 +561,17 @@ In React, to get external functionalities, we use Bundlers.
 11. Compatible with older version of browser 
 
 
-##### Minification 
+### Minification 
 * Minification is the process of making your code and markup smaller by removing unnecessary spaces, line breaks, and other characters that are not essential for the code to run correctly. It aims to reduce the size of the files to optimize website performance and improve loading times.
 * When you write code or markup for a website or a script file, you typically use indentation, line breaks, and comments to make it more readable and understandable for yourself and other developers. However, when the code gets sent over the internet to the user's browser, all of these extra characters are not necessary for the browser to understand and execute the code.
 
-##### Tree Shaking 
+### Tree Shaking 
 * `Tree shaking` is process of removing the unwanted code that we do not use while developing the application. 
 * Tree shaking is a dead code elimination technique that is applied when optimizing code.
 * Example :  We are importing a library which has a lot of functions (20 functions). then, all those 20 functions will come into your code. But in my app, I may want to use only 1 or 2 out of it.  
 Here Parcel will ignore all the unused code.  
 
-##### HMR (Hot Module Reload)
+### HMR (Hot Module Reload)
 * `HMR (Hot Module Replacement)` - adds, or removes modules while an application is running, without a full reload.
 * There is `File Watcher Algorith` (Written in C++). It keeps track of all the files which are changing realtime & it tells the server to reload.  
 
@@ -593,7 +593,7 @@ The /dist folder contains the minified version of your source code that is used 
 <details>
 <summary>React Component</summary>
 
-# React Component
+## React Component
 * A Component is a normal JS function that returns a JSX element. 
 * End of the day any Component is JS Object.
 
@@ -605,7 +605,7 @@ const Welcome = () => <h1 className="message">Hello World</h1>;
 * Generally developers are used Component name as PascalCase.
 * PascalCase is recommended for naming convention of Component.
 
-##### Call the Component
+### Call the Component
 
 ```js
 // Return JSX
@@ -620,7 +620,7 @@ return (
 
 ```
 
-##### Call the Element
+### Call the Element
 
 ```js 
 const myElement = <h1>Hello World</h1>;
@@ -672,7 +672,7 @@ return (
 
 ```
 
-##### We can use `Named export` and `Default export` together.
+### We can use `Named export` and `Default export` together.
 ```js
 export const MyComponent1 = () => {}
 export const MyComponent2 = () => {}
@@ -773,7 +773,7 @@ let output = Add(1,2);
 console.log(output);  // 3
 ```
 
-##### Pure Component
+### Pure Component
 We know that in React we can create a component in two different ways that one is Class component/ Stateful component and another is Functional component/Stateless component.  
 A React component can be considered pure if it renders the same output for the same state and props.
 Pure component does not give any side effects.
@@ -783,7 +783,7 @@ We can convert component to pure component as below:
 * For __Functional component__ react provides `React.memo`.
 
 
-##### React.PureComponent
+### React.PureComponent
 Now, by extending `PureComponent` instead of `Component`, this class benefits from the default `shouldComponentUpdate` method provided by PureComponent, which performs a shallow comparison of __props__ and __state__ to determine if a re-render is necessary. In this specific example, since the name state doesn't change during the changeName method, the PureClassComponent won't re-render unnecessarily.
 
 ```js
@@ -819,7 +819,7 @@ export default PureClassComponent;
 
 ```
 
-##### React.memo
+### React.memo
 * `React.memo` is similar to `React.PureComponent` and it is for functional component instead of class component. 
 * It memoize the Component. The Component is re-recreated when props or state of the Components Updated. 
 * you can avoid re-rendering when the same props and state of the Component.
@@ -847,7 +847,7 @@ export default memo(MyComponent);
 1. __Class__ Component
 2. __Functional__ Component
 
-##### Class Component
+#### Class Component
 * If class name starts with Capital letter then only react treats as Component otherwise react treats as HTML Element.
 * The component name should always be in the pascal case.
 * Class Component we can call as **stateful** Component.
@@ -922,7 +922,7 @@ export default App;
 
 ```
 
-### Functional Component
+#### Functional Component
   * A functional component is just a JavaScript function that accepts props as an argument and returns a React JSX element.
   * There is no render method used in functional components.
   * If component have don't have any state, then It is called Stateless component.
@@ -945,7 +945,7 @@ const App = () => {
 <details>
 <summary>State</summary>
 
-### state
+## state
 * State is created and managed within the component, similar to a variable declared within the function.
 * State is used to store the component's data that changes over time.
 * We can update state 
@@ -955,7 +955,7 @@ const App = () => {
 * If we try to update the state directly then it won't re-render the component.
 * state should be immutable
 
-##### setState
+### setState
 The setState is a method to modify the current state.
 When the state object changes, the component re-renders.
 
@@ -979,14 +979,14 @@ When the state object changes, the component re-renders.
 
 ```
 
-##### setState() callback function
+### setState() callback function
 The `setState()` method is a asynchronous, it takes an optional callback parameter that can be used to make updates after the state is changed.
 
 ```js  
 this.setState({key1:value1}, callback)
 ```
 
-##### React Batch Updating
+### React Batch Updating
 React combines multiple `setState()` calls into single update.
 
 ```js 
@@ -1027,7 +1027,7 @@ export default App
 <details>
 <summary>props</summary>
 
-# props
+## props
 
 * `Props` stands for __Properties__.
 * We can pass information from __Parent Component__ to __Child Component__ by using props.
@@ -1073,12 +1073,12 @@ return (
 export default Child;
 ```
 
-##### Prop Drilling
+### Prop Drilling
 Prop Drilling is a process in which Props are passed from one Component to another Component that does not need the data but only helps in passing it through the tree.
 
 Example : We have grand, parent, and child components. In this scenario, we want to pass props from the grand to the child. However, the parent component acts as a mediator, receiving props from the grand and passing them to the child.
 
-##### `key` prop in listItem
+### `key` prop in listItem
 * A `key` is a special attribute you need to include when creating list of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted.
 * Otherwise, React cannot understand which item is newly added or removed or modified.
 * without key property react re-render the all the list items.
@@ -1098,7 +1098,7 @@ Example : We have grand, parent, and child components. In this scenario, we want
 * Don't use __index__ as a key. please use __unique id__.
 * Yes, we can use the `index as keys`, but it is not considered as a good practice to use them because if the order of items may change.
 
-##### defaultProps
+### defaultProps
 `defaultProps` is a property in React Component used to set default values for the props.
 This is similar to adding default parameters to the function.
 
@@ -1132,7 +1132,7 @@ export default Welcome;
 
 ```
 
-#### props are de-structured on Fly 
+### props are de-structured on Fly 
 
 ```js
 const App = () => {
@@ -1153,7 +1153,7 @@ return (
 }
 ```
 
-##### children prop
+### children prop
 `Children` is a prop that allow you to pass components as data to other components. The data between component's __opening__ and __closing__ tag will be passed to other component as children prop.
 
 ```js 
@@ -1204,7 +1204,7 @@ Some of the advantages of Unidirectional data flow are:
 <details>
 <summary>Component Life Cycle</summary>
 
-# Component Life Cycle
+## Component Life Cycle
 __Component Life Cycle__ is a different Stages of the Component during its existence.
 ![Class Component Life Cycle](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017681/portfolio/markdown/react/Life_Cycle.png)
 
@@ -1213,13 +1213,13 @@ __Component Life Cycle__ is a different Stages of the Component during its exist
 2. Updating
 3. Unmounting
 
-##### Mounting
+#### Mounting
 In the Mounting Stage, the instance of a component is created and inserted into the Real DOM.
 
-##### Updating
+#### Updating
 In Updating Stage, the component is updated whenever there is a change in the component's state. 
 
-##### Unmounting
+#### Unmounting
 In Unmounting Stage, the component instance is removed from the DOM. 
 
 ### React phases
@@ -1236,7 +1236,7 @@ when the class loads, automatically constructor is called.
 4. componentDidUpdate => after first render
 5. componentWillUnmount => after component unmounted
 
-##### Life Cycle Methods Flow
+### Life Cycle Methods Flow
 * Mounting Phase
   - constructor()
   - render()
@@ -1248,7 +1248,7 @@ when the class loads, automatically constructor is called.
   - componentWillUnmount()
 
 
-##### constructor()
+#### constructor()
 The `constructor()` method is used to setup the initial state and initialize the instance of properties.
   
 ```js 
@@ -1258,16 +1258,16 @@ this.state = {key:"value"}
 }
 ```
 
-##### render()
+#### render()
 The `render()` method is used to return the JSX that is displayed in the UI.
 If more than one JSX element is to be rendered, then they must be grouped using a container element or use React fragment.
 The `render()` is called whenever there is a change in the component's state.
 
-##### componentDidMount()
+#### componentDidMount()
 The `componentDidMount()` method allows us to execute the React code After Initial render (placed in the DOM).
 Examples : make API calls, Timers
 
-##### componentWillUnmount()
+#### componentWillUnmount()
 The `componentWillUnmount()` is invoked immediately before a component is unmounted or destroyed. All the cleanup activities are performed in this method. 
 The `componentWillUnmount()` is useful for the cleanup of the application when we switch routes from one place to another. 
 Example : clearInterval, clearTimeout, Canceling network requests
@@ -1279,7 +1279,7 @@ Example : clearInterval, clearTimeout, Canceling network requests
 <details>
 <summary>Hooks</summary>
 
-### Hooks
+## Hooks
 React Component -> Normal JS Function
 React Element -> Normal JS Object
 React Hook -> Normal JS FUnction with superpowers
@@ -1289,7 +1289,7 @@ React Hook -> Normal JS FUnction with superpowers
 * React Hooks are Normal JS Utility Functions.
 * with the help of Hooks we can add __state__, __context__ and __lifecycle__ methods to the Functional Component.
 
-##### React Hooks Advantages
+#### React Hooks Advantages
 * Components become simple and easy to understand.
 * fewer lines of code.
 * No need of switching between class & Function Components.
@@ -1317,7 +1317,7 @@ React Hook -> Normal JS FUnction with superpowers
 * Hooks can only be called inside React function components.
 * Hooks can only be called at the top level of a component.
 
-##### useState()
+#### useState()
 * `useState` hook is used to maintain the local state in Functional Component.
 * The `useState` hook is a special function that takes the `initialState` as an argument and `returns an array` of two entries.
 
@@ -1351,7 +1351,7 @@ setterFunction((prevState) => nextState);
 * when re-render happens UI layer will change.
 * whenever State variables update, react triggers a reconciliation cycle(re-renders the component) 
 
-##### useReducer()
+#### useReducer()
 This is also add Local State to the Component.  
 It used to manage the complex state. 
 
@@ -1410,7 +1410,7 @@ export default App;
 
 ```
 
-##### useEffect()
+#### useEffect()
 * The `useEffect` Hook is used to Execute Logic after the Component render.
 * The `useEffect` Hook allows you to  `eliminate side effects` in your components.
 * we can say `useEffect` is combination of `componentDidMount`, `componentDidUpdate`, `componentWillunmount`.
@@ -1468,12 +1468,12 @@ export default Clock
 
 ```
 
-##### useLayoutEffect()
+#### useLayoutEffect()
 * `useLayoutEffect` runs synchronously after a render but before the UI Layer is updated. 
 * It means `useLayoutEffect` runs first than `useEffect`
 * The `useLayoutEffect` function is triggered synchronously before the DOM mutations are painted. However, the `useEffect` function is called after the DOM mutations are painted.
 
-##### useContext()
+#### useContext()
 we can access __React Context__ Object with `useContext()` hook.
 
 ```js 
@@ -1494,7 +1494,7 @@ export default Child;
 
 ```
 
-##### useRef()
+#### useRef()
 * The `useRef` Hook is used to update some value in your component, but no need to re-render.
 * `useRef` is remembered the value.
 * we can access the DOM elements. we can interact with HTML DOM without re-render.
@@ -1551,7 +1551,7 @@ export default App;
 
 ```
 
-##### useMemo
+#### useMemo
 * `useMemo` Hook memoize the Heavy Operation result.
 * `useMemo` Hook increases the performance of your application.
 * When the component is re-rendered, the callback function will be executed when the values in the dependency array change.
@@ -1606,7 +1606,7 @@ export default App;
 
 ```
 
-##### useCallback()
+#### useCallback()
 * `useCallback` Hook memoize the Function Definition.
 * `useCallback` Hook increases the performance of your application.
 * When the component is re-rendered, the callback function will be re-created when the values in the dependency array change.
@@ -1645,10 +1645,10 @@ export default CallbackHook
 
 ```
 
-##### memo
+#### memo
 * It  memoize the Component. The Component is re-recreated when props or state of the Components Updated.
 
-##### Own Hook
+#### Own Hook
 * we can create own hooks for Single Responsibility priciple. 
 * Hooks are utility functions.
 * Hooks are basically normal JS functions.
@@ -1716,12 +1716,12 @@ export default App;
 <details>
 <summary>Routing</summary>
 
-### Routing
+## Routing
 * In React, routing refers to the process of managing and navigating between different views or pages in a single-page application (SPA). 
 * React doesn't come with built-in routing functionality, so developers often use third-party libraries like `react-router-dom` to implement routing in their applications.
 * `react-router-dom` is a popular library used for implementing routing in React applications.
 
-##### SPA
+### SPA
 __SPA__ stands for __single page application__
 * __SPA__ enables users to move between different parts of the application without the need of a full page reload. 
 * React is mainly used to build single-page applications.
@@ -1731,13 +1731,13 @@ __SPA__ stands for __single page application__
 * __SPA__ is a web application that dynamically updates the webpage without reloading/refreshing the entire page. 
 * All the HTML, CSS, JS are retrieved in the initial load and other data/resources can be loaded dynamically whenever required.
 
-##### MPA 
+### MPA 
 __MPA__ stands for __Multi-page application__
 * In a Multi-page application, Every URL is associated with corresponding resources (HTML, CSS, JS).
 * The browser downloads these resources when you access them or navigate between URLs.
 
 
-##### Q: What is the difference between `Client Side Routing` and `Server Side Routing`?
+### Q: What is the difference between `Client Side Routing` and `Server Side Routing`?
 A: In `Server-side routing or rendering (SSR)`, every change in URL, http request is made to server to fetch the webpage, and replace the current webpage with the older one.  
 In `Client-side routing or rendering (CSR)`, during the first load, the webapp is loaded from server to client, after which whenever there is a change in URL, the router library navigates the user to the new page without sending any request to backend. All `Single Page Applications uses client-side routing`. 
 
@@ -1749,13 +1749,13 @@ In `Client-side routing or rendering (CSR)`, during the first load, the webapp i
    - Navigate
    - withRouter
 
-#####  BrowserRouter
+###  BrowserRouter
 To add routing, wrapping all the components with `BrowserRouter`.
 
-##### Route
+### Route
 The `Route` Component renders specific UI component when path matches current URL. 
 
-##### Link
+### Link
 Don't use `<a></a>` tag,  because the whole page get reload with anchor tag.
 so use `<Link>` component of `react-router-dom`  
 you can navigate to other page without reload the full page.
@@ -1782,14 +1782,14 @@ const Header = () => {
 export default Header;
 ```
 
-##### Navigate
+### Navigate
 navigate Component is used to redirect to another path.
 
 ```js 
   <Navigate to="/home" replace={true} />
 ```
 
-##### withRouter (older version)
+### withRouter (older version)
 To provide __Routing default properties__ prop to other components, we can wrap it with the withRouter function while exporting it.
 `export default withRouter(Header)`
 
@@ -1935,7 +1935,7 @@ const ProtectedRoute = (props) => {
 export default ProtectedRoute;
 ```
 
-##### Router Default Properties
+### Router Default Properties
 When a component is rendered through the __route__, some of the additional props are passed.
 
 **They are**:
@@ -1944,7 +1944,7 @@ When a component is rendered through the __route__, some of the additional props
 * __location__: The location object contains the information about the current URL.
 
 
-##### useHistory
+#### useHistory
 The useHistory hook gives you access to the history instance that you may use to navigate.
 
 ```js
@@ -1965,7 +1965,7 @@ function HomeButton() {
 }
 ```
 
-##### useParams
+#### useParams
 useParams returns an object of key/value pairs of URL parameters. Use it to access match params of the current `<Route>`.
 
 ```js 
@@ -1997,9 +1997,9 @@ const ProfilePage = () => {
 <details>
 <summary>Context</summary>
 
-### Context
+## Context
 
-##### Application
+### Application
 App has 2 layers
 1. Data Layer
 2. UI Layer
@@ -2061,7 +2061,7 @@ export default App;
 
 ```
 
-##### Access in Functional Component
+#### Access in Functional Component
 we can access __React Context__ Object with `useContext()` hook.
 
 ```js 
@@ -2082,7 +2082,7 @@ export default Child;
 
 ```
 
-##### Access in class component
+#### Access in class component
 ```js 
 	<MyContext.Consumer>
 		{(data) => {
@@ -2090,7 +2090,7 @@ export default Child;
 		}}
 	</MyContext.Consumer>
 ```
-##### Access in Functional Component
+#### Access in Functional Component
 
 ```js 
 import { createContext } from "react";
@@ -2135,7 +2135,7 @@ export default function MyComponent() {
 <details>
 <summary>Redux Toolkit</summary>
 
-# Redux
+## Redux
 Redux is a Data Layer.  
 Redux is not a mandatory to manage a Global State.
 Building small app, there is no need to use Redux.  
@@ -2159,7 +2159,7 @@ Redux is not only the library for managing the state.
 * selector => Access Store
 * Check in redux dev tools
 
-##### Build Our Store
+#### Build Our Store
 
 ```js 
 /* -----> Third Party Packages <----- */
@@ -2181,7 +2181,7 @@ export default appStore;
 
 ```
 
-##### Add global state to APP
+#### Add global state to APP
 
 ```js 
 import { Provider } from 'react-redux'
@@ -2192,7 +2192,7 @@ import store from "./store/appStore"
 	</Provider>
 ```
 
-##### create slice
+#### create slice
 ```js 
 /* -----> Third Party Packages <----- */
 import { createSlice } from '@reduxjs/toolkit';
@@ -2218,7 +2218,7 @@ export default mySlice.reducer; // Reducer
 
 ```
 
-##### Access Store 
+#### Access Store 
 `useSelector` hook is used  Subscribe to the store. 
 
 ```js
@@ -2226,7 +2226,7 @@ import {useSelector} from "react-redux";
 const isLogin = useSelector((store) => store.my.isLogin)
 ```
 
-##### dispatching 
+#### dispatching 
 `useDispatch` hook is used dispatch the action to store. 
 
 ```js
@@ -2251,13 +2251,13 @@ return (
 <details>
 <summary>Storage</summary>
 
-# Storage
+## Storage
 1. Local Storage 
 2. Session Storage
 3. Cookies Storage
 4. IndexedDb
 
-##### `js-cookies` 
+### `js-cookies` 
 storing data on client-side with expiry duration.
 `js-cookies` is a Third Party Package.
 * `Cookies.set('CookieName', 'CookieValue', {expires: DAYS})`
@@ -2271,7 +2271,7 @@ storing data on client-side with expiry duration.
 <details>
 <summary>Styles</summary>
 
-# Styles
+## Styles
 we can style the React Component by using:
 1. Inline
 2. custom css file
@@ -2313,7 +2313,7 @@ npx tailwindcss init
 <div className="bg-red-400 w-[200px]"></div> 
 ```
 
-##### Styled Components
+### Styled Components
 Styled Components are one of the new ways to use CSS in modern React. These are used to reuse styles.
 We can use the third-party package `styled-components` to write Styled Components in the React Application.
 
@@ -2342,13 +2342,13 @@ export default App;
 <details>
 <summary>API</summary>
 
-# API
+## API
 __API__ stands for __Application Programming Interface__
 
 ### API integration
 The API integration can be defined as the process of creating interaction for two or more APIs to share data and communicate with each other without human interruption.
 
-##### axios
+#### axios
 Axios is a third-party package for making HTTP requests.
 
 It is similar to the `fetch` method.
@@ -2367,7 +2367,7 @@ It is similar to the `fetch` method.
 2. Success View
 3. Failure View
 
-##### Q: What is `CORS`?
+### Q: What is `CORS`?
 __CORS__ stands for __Cross-Origin Resource Sharing__.  
 CORS is used to calls from one domain to another domain.
 
@@ -2378,7 +2378,7 @@ Example :
 `Optional Chaining` (`?.`) operator accesses an object's property or calls a function. If the object accessed or function called is `undefined or null` , it returns `undefined` instead of throwing an error.
 Example : `data?.card`
 
-#### || operator
+### || operator
 If there is available it gives, otherwise it gives last item.
 ```js 
 const data = apiData || hardData
@@ -2396,7 +2396,7 @@ const data = apiData || hardData
 <details>
 <summary>Lazy Loading</summary>
 
-# Lazy Loading
+## Lazy Loading
 Bundler takes all your files and bundle into one file.  
 All the `js` files bundle into 1 file is good. but some cases 1000 files bundle into 1 file is not good. also don't call 1000 files in browser. browser do a lot of work to call 1000 files.
 * we do logically break your entire application into smaller applications.
@@ -2410,14 +2410,14 @@ Lazy Loading has many names :
 4. Lazy Loading
 5. On demand loading
 
- ##### Bundle `<MyComponent/>`
+ ### Bundle `<MyComponent/>`
  Create separate bundle for MyComponent.
  If we use LazyLoading, initial our MyComponent code is not in app bundler, when we go the MyComponent page then only MyComponent will load.
 
-##### lazy
+#### lazy
 The lazy function in React allows you to import components asynchronously, meaning they are loaded only when needed. 
 
-# Suspense
+#### Suspense
 The Suspense component is another feature of React that helps manage asynchronous rendering.
 
 ```js 
@@ -2447,20 +2447,20 @@ const routes = [
 <details>
 <summary>DOM</summary>
 
-# DOM
+## DOM
 __DOM__ stands for __Document Object Model__
 
 ### Types of DOMs
 1. Real DOM
 2. Virtual DOM
 
-##### Real DOM 
+#### Real DOM 
 __HTML DOM__ is called __Real DOM__.
 * The Real DOM is __UI__ of our application.
 * It is the structured representation of the HTML document created by the browser. 
 * It allows JavaScript to manipulate, structure, and style of your website.
 
-##### Virtual DOM
+#### Virtual DOM
 * DOM is created by React JS is called Virtual DOM.
 * The virtual DOM is only a virtual representation of the Real DOM.
 * whenever new elements are added to the UI, a new virtual DOM is created.
@@ -2476,7 +2476,7 @@ __HTML DOM__ is called __Real DOM__.
 | It can directly update HTML              | It can’t update HTML directly                  |
 | It represents the UI of your application | It is only a virtual representation of the DOM |
 
-##### ReactDOM
+#### ReactDOM
 __ReactDOM__ is the part of React that allows React to interact with the Real DOM.
 
 ```js 
@@ -2492,11 +2492,11 @@ ReactDOM.render(
 )
 ```
 
-##### Why React is fast?
+### Why React is fast?
 * React is very fast Because it has `virtual DOM`, `Reconciliation`, `Diff algorithm`. 
 * React is fast because of its fast DOM manipulation.
 
-##### Reconciliation
+### Reconciliation
 * we need virtual DOM for Reconciliation. 
 * React stores a copy of Browser DOM which is called `Virtual DOM`.
 * Reconciliation is uses `Diff Algorithm`.
@@ -2506,12 +2506,12 @@ ReactDOM.render(
 * React compares new virtual DOM with current virtual DOM, and the difference will be updated to the Real DOM.
 * It finds out the changed nodes and updates only the changed nodes in Real DOM leaving the rest nodes as it is. This process is called Reconciliation.
 
-##### Q: What is `React Fiber`?
+### Q: What is `React Fiber`?
 In React 16, Diff algorithm changed a little and React introduced React Fiber.  
 React Fiber is a concept of ReactJS that is used to render a system faster, smoother and smarter.
 The Fiber reconciler, which became the default reconciler for React 16 and above, is a complete rewrite of React’s reconciliation algorithm to solve some long-standing issues in React.
 
-##### Why React is faster than JS?
+### Why React is faster than JS?
 Actually __react__ is a JavaScript library, SO React is as fast as javascript.
 
 </details>
@@ -2521,7 +2521,7 @@ Actually __react__ is a JavaScript library, SO React is as fast as javascript.
 <details>
 <summary>React Events</summary>
 
-### React Events
+## React Events
 Handling events with React elements is very similar to handling events on DOM elements.  
 There are some syntax differences:
 
@@ -2566,7 +2566,7 @@ export default App;
 
 ```
 
-##### Synthetic Events
+### Synthetic Events
 * React has its own special way of handling events, and they're called synthetic events.
 * These events help your app work smoothly for everyone, even if they're using old browsers.
 * They ensure that your app behaves the same way, no matter where it's opened—like a friendly language that all browsers understand.
@@ -2597,12 +2597,12 @@ const handleClick = (event) => {
 <details>
 <summary>Forms</summary>
 
-# Forms
+## Forms
 
-##### controlled Input
+### controlled Input
 If the Input Element value is handled by a React State then it is called Controlled Input
 
-##### Uncontrolled Input
+### Uncontrolled Input
 * If the Input Element value is handled by the browser itself then it is called Uncontrolled Input.
 * Its value can only be set by a user, but not programmatically.
 
@@ -2613,7 +2613,7 @@ If the Input Element value is handled by a React State then it is called Control
 <details>
 <summary>Conditional Rendering</summary>
 
-# Conditional Rendering
+## Conditional Rendering
 Here, we need to render either a shimmer UI or a data UI
 1. if statement 
 2. && Operator -> Logical
@@ -2662,7 +2662,7 @@ return(myList?.length === 0) ? <Shiimer/> : <MyComponent/>
 <details>
 <summary>Authentication</summary>
 
-### Authentication
+## Authentication
 Authentication is the process of verifying a user's identity.
 ![Authentication and Authorization](https://res.cloudinary.com/dwrwbjd3h/image/upload/v1711017654/portfolio/markdown/react/authentication.png)
 </details>
@@ -2672,7 +2672,7 @@ Authentication is the process of verifying a user's identity.
 <details>
 <summary>Testing</summary>
 
-# Testing
+## Testing
 1. Manual Testing
 2. Developer Testing (code testing)
 
@@ -2681,19 +2681,19 @@ Authentication is the process of verifying a user's identity.
 2. Integration Testing 
 3. End-to-End Testing - e2e testing
 
-##### Unit Testing
+#### Unit Testing
 Test specific part of the React application, not whole application.
 
-##### Integration Testing
+#### Integration Testing
 Test the Integration of multiple components. 
 
-##### End-to-End Testing
+#### End-to-End Testing
 test the all the flows.
 
 ### react testing library 
 react testing library uses __jest__.
 
-##### Setting up Testing in our application 
+#### Setting up Testing in our application 
 1. Install React Testing Library 
 2. Install jest
 3. Install Babel dependencies 
@@ -2705,10 +2705,10 @@ react testing library uses __jest__.
 9. Include @babel/preset-react inside my babel
 10. Include @testing-library/jest-dom
 
-##### run test cases
+### run test cases
 npm run test 
 
-# create testcase
+### create testcase
 1. folder => `__tests__` => All the files inside this folder are test files.
 2. file  
 * `Component.test.js`
@@ -2717,7 +2717,7 @@ npm run test
 * `Component.spec.ts`
 
 
-##### Unit testcase Example 
+#### Unit testcase Example 
 ```js 
 import {sum} from "./Utils"
 
@@ -2730,13 +2730,13 @@ test('Sum function should calculate the sum of two numbers', () => {
 });
 ```
 
-##### Writing testcase steps
+### Writing testcase steps
 1. render
 2. Querying
 3. Assertion
 
 
-##### Write Group testcase
+#### Write Group testcase
 
 ```js 
 import Contact from "./Components/Contact"
@@ -2772,7 +2772,7 @@ describe('Contact Us Page Test Case', () => {
 <details>
 <summary>Industry Standards</summary>
 
-# Industry Standards
+## Industry Standards
 
 ### Code Style 
 1. Don't maintain the code more than 100 lines.
@@ -2847,7 +2847,7 @@ It is used to debug the code.
 <details>
 <summary>Optimization</summary>
 
-### Optimization
+## Optimization
 as possible as we decrease the size of our application.
 </details>
 

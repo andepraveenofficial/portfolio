@@ -38,9 +38,9 @@ const App = () => {
 
   // Security
   useRightButtonDisable()
-  usePrintScreenDisable()
   useDeveloperToolsDisable()
   useCopyDisable()
+  usePrintScreenDisable()
 
   // Return JSX
   return (

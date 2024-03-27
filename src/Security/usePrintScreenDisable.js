@@ -1,6 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const usePrintScreenDisable = () => {
+
+  const [blackscreen, setBlackscreen] = useState(false)
  useEffect(() => {
     const handleKeyDown = (e) => {
       // Check if the pressed key is the "Print Screen" key or any other key that might trigger a screenshot
@@ -9,7 +11,13 @@ const usePrintScreenDisable = () => {
         e.preventDefault();
         // Optionally, you can handle or notify the user about the attempt
         console.log("Screenshots are not allowed.");
-        window.alert("Screenshots are not allowed.")
+        setBlackscreen(true)
+        // window.alert("Screenshots are not allowed.")
+
+        setTimeout(()=>{
+          setBlackscreen(false)
+        }, 200)
+        
       }
     };
 
@@ -21,6 +29,8 @@ const usePrintScreenDisable = () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
+
+  return blackscreen
 }
 
 export default usePrintScreenDisable

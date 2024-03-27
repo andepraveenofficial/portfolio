@@ -10,7 +10,6 @@ const ContactForm = () => {
     // Methods 
     const sendEmail = (event) => {
         event.preventDefault()
-        console.log("Send Email")
 
         emailjs
             .sendForm("service_m15jwmq", 'template_ybppsah', form.current, {

@@ -21,13 +21,26 @@ import Cursor from './Features/Cursor'
 // import BackgroundEffects from "./Features/BackgroundEffects"
 const BackgroundEffects = lazy(() => import("./Features/BackgroundEffects"))
 
+/* -----> Security <----- */
+import useRightButtonDisable from "./Security/useRightButtonDisable"
+import usePrintScreenDisable from "./Security/usePrintScreenDisable"
+import useDeveloperToolsDisable from "./Security/useDeveloperToolsDisable"
+
+
 /* -----> Styles <----- */
 import './App.css';
+import useCopyDisable from "./Security/useCopyDisable"
+
 
 /* -----> Component <----- */
 const App = () => {
   console.log("App Layout")
 
+  // Security
+  useRightButtonDisable()
+  usePrintScreenDisable()
+  useDeveloperToolsDisable()
+  useCopyDisable()
 
   // Return JSX
   return (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const useOnlineStatus = () => {
-    const [isOnline, setIsOnline] = useState(false) // Initial online state
+    const [isOnline, setIsOnline] = useState(true) // Initial online state
 
     useEffect(() => {
         const handleOnline = () => setIsOnline(true);
@@ -17,7 +17,7 @@ const useOnlineStatus = () => {
         };
     }, []); // Empty dependency array: run effect only once after initial render
 
-    console.log(isOnline); // For debugging purposes (usually not needed in production)
+    // console.log(isOnline); // For debugging purposes (usually not needed in production)
 
     return isOnline;
 }

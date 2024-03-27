@@ -1,5 +1,5 @@
 /* -----> Third Party Packages <----- */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 /* -----> Icons & Logos <----- */
@@ -15,9 +15,14 @@ import useOnlineStatus from "../Hooks/useOnlineStatus";
 const Header = () => {
     // Local State
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [onlineStatus, setOnlineStatus] = useState(true)
 
     // Hooks
     const isOnline = useOnlineStatus()
+
+    useEffect(() => {
+        setOnlineStatus(isOnline)
+    }, [isOnline])
 
     // Methods
     const toggleMenu = () => {
@@ -26,7 +31,7 @@ const Header = () => {
 
     // React Elements
     const socialIcons = <>
-        <span>{isOnline ? "🔴" : "🟢"}</span>
+        <span>{onlineStatus ? "🟢" : "🔴"}</span>
         <a href="https://www.linkedin.com/in/andepraveen/" target="blank" className="p-2 rounded-full hover:bg-gray-600">
 
             <FaLinkedinIn className='w-6 h-6 text-white ' />

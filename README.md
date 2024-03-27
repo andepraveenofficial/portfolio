@@ -89,3 +89,7 @@ Drawing :
 Prevent the information from Hackers.
 Secrete Information
 1. `.env` file => add this file in gitignore
+
+### Security
+1. Disable Right Button
+2. Disable Print Screen 

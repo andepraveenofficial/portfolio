@@ -16,10 +16,11 @@ const MarkdownStyles = styled.div`
        max-width:920px !important;
     }
 
-  h1, h2, h3, h4, h5, h6 {
-        margin-top: 20px;
-        font-weight: bold;
-    }
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
 
     h1 { font-size: 36px; color: #F06292; }
     h2 { font-size: 28px; color: #64B5F6; }

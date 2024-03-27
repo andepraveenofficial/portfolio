@@ -17,7 +17,7 @@ import MarkdownStyles from "../StyledComponents/MarkdownStyles"
 const Markdown = () => {
 
     const selectMarkdown = useSelector((state) => state.markdown)
-    console.log(selectMarkdown)
+    // console.log(selectMarkdown)
 
     const renderMarkDown = () => {
         switch (selectMarkdown) {

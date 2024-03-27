@@ -4,7 +4,6 @@ import Sidebar from "../Layouts/Sidebar"
 /* -----> Component <----- */
 const Learning = () => {
     console.log("   Learning Page")
-    window.alert("Do not take screenshot of this page");
 
     // Return JSX
     return (
